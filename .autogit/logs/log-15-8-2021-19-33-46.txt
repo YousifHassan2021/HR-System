@@ -1,0 +1,24 @@
+-------------------- Auto-Git Log --------------------
+		Wed Sep 15 2021 19:33:46 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/templates/accounts/employees.html
+* accounts/urls.py
+* accounts/views.py
+* hr/views.py
+* missed.md
+* project/urls.py
+* templates/500.html
+* utils/auth_decorators.py
+
+
+Created files:
+* .autogit/logs/log-15-8-2021-19-3-36.txt
+* accounts/templates/registration/login.html
+
+
+Deleted files:
+
+
+Renamed files:

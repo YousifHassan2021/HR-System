@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load bootstrap4 %}
+{% block body %}	
+			<!-- Page Wrapper -->
+            <div class="page-wrapper">
+			
+				<!-- Page Content -->
+                <div class="content container-fluid">
+				
+					<!-- Page Header -->
+					<div class="page-header">
+						<div class="row align-items-center">
+							<div class="col">
+								<h3 class="page-title">{% trans 'Overtime' %}</h3>
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item"><a href="">{% trans 'Dashboard' %}</a></li>
+									<li class="breadcrumb-item active">{% trans 'All Overtime' %}</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- /Page Header -->
+					
+					<!-- Overtime Statistics -->
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+							<div class="stats-info">
+								<h6>{% trans 'Overtime Hours' %}</h6>
+								<h4>{{total.overhours__sum}} Hr </h4>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+							<div class="stats-info">
+								<h6>{% trans 'Accepted' %}</h6>
+								<h4>{{accepted_overtime}}  </h4>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+							<div class="stats-info">
+								<h6>{% trans 'Rejected' %}</h6>
+								<h4>{{rejected_overtime}} </h4>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+							<div class="stats-info">
+								<h6>{% trans 'Pending' %} </h6>
+								<h4>{{pending_overtime}} </h4>
+							</div>
+						</div>
+
+					</div>
+					<!-- /Overtime Statistics -->
+					
+					<div class="row">
+						<div class="col-md-12">
+							<div class="table-responsive">
+								<table class="table table-striped custom-table mb-0 datatable">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>{% trans 'Date' %}</th>
+											<th class="text-center">{% trans 'Hours' %}</th>
+											<th>{% trans 'Type' %} </th>
+											<th>{% trans 'Description' %}</th>
+											<th class="text-center">{% trans 'Status' %}</th>
+											<th>{% trans 'Approved by' %}</th>
+						
+										</tr>
+									</thead>
+									<tbody>
+										
+										{% for object in overtime %}
+										<tr>
+											<td>{{forloop.counter}}</td>
+											<td>{{object.date}}</td>
+											<td class="text-center">{{object.overhours}}</td>
+											<td>{{object.hour_equal}}x</td>
+											<td>{{object.description}}</td>
+											<td>{{object.status}}</td>
+											<td>
+												<h2 class="table-avatar">
+													<a href="" class="avatar avatar-xs"><img src="{{object.user.user_job.direct_manager.user_profile.image.url}}" alt=""></a>
+													<a href="#">{{object.user.user_job.direct_manager}}</a>
+												</h2>
+											</td>
+										</tr>
+														
+										{% endfor %}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+                </div>
+				<!-- /Page Content -->
+				
+
+
+				
+            </div>
+			<!-- /Page Wrapper -->
+			{% endblock body %}

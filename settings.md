@@ -1,0 +1,26 @@
+-- Asset conditions 	      CRUD
+-- Asset statuss 	      CRUD
+-- Attendence types 	      CRUD
+-- Bank names 	          CRUD
+-- Branchs 	              CRUD
+-- Citys 	              CRUD
+- Companys                
+- localization      
+- them settings	    
+- email settings     
+- Default passwords 	
+-- Discount types 	      CRUD
+-- Employee statuss 	      CRUD
+-- Follower types 	      CRUD
+-- Insurance classs 	      CRUD
+-- Insurance companys 	  CRUD
+- Job grades 	          CRUD
+-- Project perioritys 	  CRUD
+-- Project statuss 	      CRUD
+-- Qualificationss 	      CRUD
+-- Reason to terminates 	  CRUD 
+-- Replacement periods 	  CRUD
+-- Replacement types 	      CRUD
+-- Salary pay types 	      CRUD
+-- Salary types 	          CRUD
+-- Ticket types 	          CRUD

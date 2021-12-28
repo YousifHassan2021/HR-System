@@ -1,0 +1,12 @@
+{% load i18n %}
+{% for day in object_list %}	
+<tr class="holiday-completed">
+    <td>{{forloop.counter}}</td>
+    <td>{{day.name}}</td>
+    <td>{{day.date_from}}</td>
+    <td>{{day.date_to}}</td>
+    <td>
+        <button class="btn btn-danger btn-sm-x js-delete" data-url="{% url 'hr:holiday_delete' day.id %}"><i class="fa fa-trash-o m-r-5"></i>{% trans 'Delete' %}  </button>
+    </td>
+</tr>
+{% endfor %}

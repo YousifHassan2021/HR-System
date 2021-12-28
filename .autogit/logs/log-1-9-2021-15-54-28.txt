@@ -1,0 +1,21 @@
+-------------------- Auto-Git Log --------------------
+		Fri Oct 01 2021 15:54:28 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* static/website/css/main.css
+* website/templates/website/about.html
+* website/templates/website/contact.html
+* website/urls.py
+* website/views.py
+
+
+Created files:
+* website/templates/website_base.html
+
+
+Deleted files:
+
+
+Renamed files:
+* [object Object]

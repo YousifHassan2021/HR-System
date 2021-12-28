@@ -1,0 +1,35 @@
+from django.contrib import admin
+
+# Register your models here.
+from . import models
+
+
+admin.site.register(models.Branch)
+admin.site.register(models.City)
+admin.site.register(models.JobType)
+admin.site.register(models.JobGrade)
+admin.site.register(models.EmployeeStatus)
+admin.site.register(models.Qualifications)
+admin.site.register(models.Department_Section)
+admin.site.register(models.SalaryPayType)
+admin.site.register(models.SalaryType)
+admin.site.register(models.BankName)
+admin.site.register(models.ReplacementType)
+admin.site.register(models.DiscountType)
+admin.site.register(models.InsuranceClass)
+admin.site.register(models.InsuranceCompany)
+admin.site.register(models.TicketType)
+admin.site.register(models.Company)
+admin.site.register(models.AttendenceType)
+admin.site.register(models.ReplacementPeriod)
+admin.site.register(models.ProjectPeriority)
+admin.site.register(models.DefaultPassword)
+admin.site.register(models.TrainingCourse)
+admin.site.register(models.Assets)
+admin.site.register(models.AssetStatus)
+admin.site.register(models.AssetCondition)
+admin.site.register(models.FollowerType)
+admin.site.register(models.Holiday)
+admin.site.register(models.ReasonToTerminate)
+admin.site.register(models.ProjectStatus)
+admin.site.register(models.ReasonToResign)

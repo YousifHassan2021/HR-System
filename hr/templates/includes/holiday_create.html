@@ -1,0 +1,12 @@
+{% load i18n %}
+{% load bootstrap4 %}
+<div class="modal-body">
+    <form method="POST" class="holiday_create_from" action="{% url 'hr:holiday_create' %}">
+        {% csrf_token %}
+        {% bootstrap_form form  %}
+        {% buttons %}
+        <button type="submit" class="btn btn-primary submit-btn">{% trans 'Submit' %}</button>
+        {% endbuttons %}
+
+    </form>
+</div>

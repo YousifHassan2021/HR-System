@@ -1,0 +1,104 @@
+/* 21. career */
+.job-wrapper {
+	background: $white;
+    padding: 50px 40px;
+    transition: .3s;
+    position: relative;
+    &::before{
+        position: absolute;
+        content: "";
+        background: $yellow-2;
+        width: 0%;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        transition: .5s;
+    }
+    &:hover{
+        &::before{
+            width: 100%;
+        }
+    }
+    & .job-box-2 {
+        @media #{$xs}{
+            flex-direction: column;
+        }
+        & .job-img {
+            @media #{$xs}{
+                margin-bottom: 20px;
+            }
+        }
+    }
+    & a {
+        @media #{$xs}{
+            margin-top: 20px;
+        }
+    }
+}
+
+.job-text {
+	& span {
+        background: $white1;
+        padding: 6px 10px;
+        text-transform: uppercase;
+        color: $theme-color;
+        font-size: 13px;
+        border-radius: 4px;
+        margin-right: 5px;
+        margin-bottom: 15px;
+        display: inline-block;
+        line-height: 1;
+        &.red-bg {
+            background: $red;
+            color: $white;
+        }
+    }
+}
+
+.job-text {
+    & h5 {
+        margin-bottom: 15px;
+    }
+    & li {
+        font-size: 18px;
+        display: flex;
+        @media #{$xs}{
+            font-size: 16px;
+        }
+        & i {
+            color: $theme-color;
+            margin-right: 7px;
+            transform: translateY(4px);
+        }
+        & em {
+            font-style: inherit;
+            display: inline-block;
+        }
+    }
+}
+
+.basic-pagination {
+    & ul {
+        text-align: center;
+        & li {
+            display: inline-block;
+            margin-right: 10px;
+            background: $white;
+            height: 45px;
+            width: 45px;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 15px;
+            color: $heding2;
+            line-height: 45px;
+            transition: .3s;
+            &:hover{
+                background: $theme-color;
+                transition: .3s;
+                & a {
+                    color: $white;
+                }
+            }
+        }
+    }
+}

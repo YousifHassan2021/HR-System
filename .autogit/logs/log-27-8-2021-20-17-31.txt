@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Mon Sep 27 2021 20:17:31 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* db.sqlite3
+
+
+Created files:
+* "hr/templates/includes/training_create copy.html"
+* "hr/templates/includes/training_delete copy.html"
+* "hr/templates/includes/training_list copy.html"
+* "hr/templates/includes/training_update copy.html"
+
+
+Deleted files:
+
+
+Renamed files:

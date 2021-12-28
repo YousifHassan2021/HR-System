@@ -1,0 +1,24 @@
+@mixin transition($time) {
+	transition: .3s;
+}
+
+@mixin transform($value) {
+  -webkit-transform: $value;
+      -ms-transform: $value;
+          transform: $value;
+}
+
+
+@mixin disableStyle {
+	&.disable {
+		color: $disable-2 !important;
+		& i {
+			color: $disable-2 !important; 
+		}
+	}
+}
+
+@mixin genericBackground {
+	background-size: cover;
+	background-repeat: no-repeat;
+}

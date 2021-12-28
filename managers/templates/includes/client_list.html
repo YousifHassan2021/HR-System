@@ -1,0 +1,21 @@
+{% load i18n %}
+{% for client in object_list  %}
+<tr>
+    <td>{{forloop.counter}}</td>
+    <td>
+        {{client.name}}
+    </td>
+    <td>{{client.mobile_number}}</td>
+    <td>{{client.email}}</td>
+    <td>{{client.address}}</td>
+    <td class="text-right">
+        <div class="dropdown dropdown-action">
+            <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <button class="btn btn-info btn-sm-x  js-update" data-url="{% url 'manager:client_edit' client.id %}"><i class="fa fa-pencil m-r-5"></i>{% trans 'Edit' %}  </button>
+                <button class="btn btn-danger btn-sm-x js-delete" data-url="{% url 'manager:client_delete' client.id %}"><i class="fa fa-trash-o m-r-5"></i> {% trans 'Delete' %} </button>
+            </div>
+        </div>
+    </td>
+</tr>
+{% endfor %}

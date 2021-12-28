@@ -1,0 +1,106 @@
+/* 11. about */
+.fe-about {
+    &::before {
+            display: none;
+        }
+        & .img-thumb {
+            & img {
+                @media #{$lg}{
+                    width: 100%;
+                }
+                @media #{$xs}{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .team-area {
+        @media #{$sm}{
+            padding-top: 75px;
+            padding-bottom: 50px;
+        }
+        @media #{$xs}{
+            padding-top: 75px;
+            padding-bottom: 50px;
+        }
+        & .section-title {
+            @media #{$sm}{
+                margin-bottom: 35px;
+            }  
+            @media #{$xs}{
+                margin-bottom: 35px;
+            }  
+        }
+    }
+    .team-wrapper {
+        border: 1px solid $hr-border-color;
+        padding: 40px 0;
+        @include transition(0.3s);
+        & h4 {
+            margin-bottom: 10px;
+            @include transition(0.3s);
+        }
+        & h5 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: $theme-color;
+            @include transition(0.3s);
+        }
+        & .team-social {
+            a {
+                font-size: 15px;
+                margin-right: 15px;
+                @include transition(0.3s);
+                & .fab.fa-facebook {
+                    color: $facebook;
+                    @include transition(0.3s);
+                }
+                & .fab.fa-twitter-square {
+                    color: $twitter;
+                    @include transition(0.3s);
+                }
+                & .fab.fa-youtube {
+                    color: $youtube;
+                    @include transition(0.3s);
+                }
+                & .fab.fa-linkedin {
+                    color: $linkedin;
+                    @include transition(0.3s);
+                }
+            }
+        }
+        & .team-img {
+            display: inline-block;
+            border: 10px solid $grey;
+            border-radius: 50%;
+        }
+        &:hover{
+            background: $theme-color;
+            & h4 {
+                color: $white;
+            }
+            & h5 {
+                color: $white;
+            }
+            & .team-social{
+                & a {
+                    i{
+                        color: $white !important;
+                    }
+                }
+            }
+        }
+    }
+
+    // google-map
+    .google-map{
+        &.contact-map {
+            line-height: 1;
+            margin-bottom: -5px;
+         & iframe {
+             height: 600px;
+             width: 100%;
+         }
+        }
+    }

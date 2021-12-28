@@ -1,0 +1,318 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+        <meta name="description" content="Smarthr - Bootstrap Admin Template">
+		<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects">
+        <meta name="author" content="Dreamguys - Bootstrap Admin Template">
+        <meta name="robots" content="noindex, nofollow">
+        <title>{{info.website_name}}</title>
+		
+		<!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="{{info.fav_icon.url}}">
+		
+		{% get_current_language as LANGUAGE_CODE %}
+		{{LANGUAGE_CODE}}
+
+		{% if LANGUAGE_CODE == 'en' %}
+		<!-- Bootstrap CSS -->
+        	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+			{% endif %}
+
+		{% if LANGUAGE_CODE == 'ar' %}
+			<link rel="stylesheet" href="{% static 'plugins/bootstrap-rtl/css/bootstrap.min.css' %}">
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet"> 
+		{% endif %}
+		
+		<!-- Fontawesome CSS -->
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+		
+		<!-- Lineawesome CSS -->
+        <link rel="stylesheet" href="{% static 'css/line-awesome.min.css' %}">
+		
+		<!-- Main CSS -->
+		{% if LANGUAGE_CODE == 'en' %}
+			<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		{% endif %}
+
+		{% if LANGUAGE_CODE == 'ar' %}
+			<link rel="stylesheet" href="{% static 'css/style-rtl.css' %}">
+		{% endif %}
+		
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="{% static 'js/html5shiv.min.js"></script>
+			<script src="{% static 'js/respond.min.js"></script>
+		<![endif]-->
+    </head>
+    <body>
+		<!-- Main Wrapper -->
+        <div class="main-wrapper">
+		
+			<!-- Header -->
+            <div class="header">
+			
+				<!-- Logo -->
+                <div class="header-left">
+                    <a href="/dashboard" class="logo">
+						<img src="{{info.logo.url}}" width="40" height="40" alt="">
+					</a>
+                </div>
+				<!-- /Logo -->
+				
+				<a id="toggle_btn" href="javascript:void(0);">
+					<span class="bar-icon">
+						<span></span>
+						<span></span>
+						<span></span>
+					</span>
+				</a>
+				
+				<!-- Header Title -->
+                <div class="page-title-box">
+					<h3>{{info.website_name}}</h3>
+                </div>
+				<!-- /Header Title -->
+				
+				<a id="mobile_btn" class="mobile_btn" href="#sidebar"><i class="fa fa-bars"></i></a>
+				
+				<!-- Header Menu -->
+				<ul class="nav user-menu">
+				
+					<!-- Flag -->
+					<li class="nav-item dropdown has-arrow flag-nav">
+						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+							<img src="{% static 'img/flags/us.png' %}" alt="" height="20"> <span>English</span>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right">
+							<a href="javascript:void(0);" class="dropdown-item">
+								<img src="{% static 'img/flags/us.png' %}" alt="" height="16"> {% trans 'English' %}
+							</a>
+							<a href="javascript:void(0);" class="dropdown-item">
+								<img src="{% static 'img/flags/sa.png' %}" alt="" height="16"> {% trans 'Arabic' %}
+							</a>
+						</div>
+					</li>
+					<!-- /Flag -->
+				
+					<!-- Notifications -->
+					<li class="nav-item dropdown">
+						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+							<i class="fa fa-bell-o"></i> <span class="badge badge-pill">3</span>
+						</a>
+						<div class="dropdown-menu notifications">
+							<div class="topnav-dropdown-header">
+								<span class="notification-title">Notifications</span>
+								<a href="javascript:void(0)" class="clear-noti"> Clear All </a>
+							</div>
+							<div class="noti-content">
+								<ul class="notification-list">
+									
+									{% for announcement in announcements %}
+									<li class="notification-message">
+										<a href="activities.html">
+											<div class="media">
+												<div class="media-body">
+													<p class="noti-details"><span class="noti-title">{{announcement.title}} </p>
+													<p><span class="noti-title">{{announcement.message}}</span></p>
+													<p class="noti-time"><span class="notification-time">{{announcement.created_at|timesince}} ago</span></p>
+												</div>
+											</div>
+										</a>
+									</li>
+									{% endfor %}
+
+								</ul>
+							</div>
+							<div class="topnav-dropdown-footer">
+								<a href="activities.html">View all Notifications</a>
+							</div>
+						</div>
+					</li>
+					<!-- /Notifications -->
+					
+
+					<li class="nav-item dropdown has-arrow main-drop">
+						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+							<span class="user-img"><img src="{{user.image.url}}" alt="">
+							<span class="status online"></span></span>
+							<span>{{user.user.username}}</span>
+						</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="">My Profile</a>
+							<a class="dropdown-item" href="{% url 'password_change' %}">Change Password</a>
+							<a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+						</div>
+					</li>
+				</ul>
+				<!-- /Header Menu -->
+				
+				<!-- Mobile Menu -->
+				<div class="dropdown mobile-user-menu">
+					<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a class="dropdown-item" href="profile.html">My Profile</a>
+						<a class="dropdown-item" href="settings.html">Settings</a>
+						<a class="dropdown-item" href="login.html">Logout</a>
+					</div>
+				</div>
+				<!-- /Mobile Menu -->
+				
+            </div>
+			<!-- /Header -->
+			
+			<!-- Sidebar -->
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-inner slimscroll">
+					<div class="sidebar-menu">
+						<ul>
+							<li> 
+								<a href="/dashboard"><i class="la la-home"></i> <span>{% trans 'Back to Home' %}</span></a>
+							</li>
+							<li class="menu-title">{% trans 'Settings' %}</li>
+							<li class="active"> 
+								<a href=""><i class="la la-building"></i> <span>{% trans 'Company Settings' %}</span></a>
+							</li>
+							<li> 
+								<a href=""><i class="la la-clock-o"></i> <span>{% trans 'Localization' %}</span></a>
+							</li>
+							<li > 
+								<a href=""><i class="la la-photo"></i> <span>{% trans 'Theme Settings' %}</span></a>
+							</li>
+							<li {% if branch_list %} class="active" {% endif %}> 
+								<a href="{% url 'settings:branch-List-Create' %}"><i class="la la-key"></i> <span>{% trans 'Branches' %}</span></a>
+							</li>
+							<li> 
+								<a href=""><i class="la la-at"></i> <span>{% trans 'Email Settings' %}</span></a>
+							</li>
+							<li {% if city_list %} class="active" {% endif %}> 
+                                <a href="{% url 'settings:city-List-Create' %}"><i class="la la-chart-bar"></i> <span>{% trans 'City Settings' %}</span></a>
+                            </li>
+                            <li{% if assetcondition_list %} class="active" {% endif %}> 
+                                <a href="{% url 'settings:asset-condition-list-create' %}"><i class="la la-thumbs-up"></i> <span>{% trans 'Asset Condition' %}</span></a>
+                            </li>
+							<li> 
+								<a href="{% url 'settings:asset-status-List-Create' %}"><i class="la la-pencil-square"></i> <span>{% trans 'Asset Status' %} </span></a>
+							</li>
+							<li> 
+								<a href="{% url 'settings:attendance-types-List-Create' %}"><i class="la la-money"></i> <span>{% trans 'Attendance Types' %}</span></a>
+							</li>
+							<li> 
+								<a href="{% url 'settings:bank-names-List-Create' %}"><i class="la la-globe"></i> <span>{% trans 'Bank Names' %}</span></a>
+							</li>
+							<li> 
+								<a href=""><i class="la la-lock"></i> <span>{% trans 'Default Password' %}</span></a>
+							</li>
+							<li> 
+								<a href="{% url 'settings:discount-types-List-Create' %}"><i class="la la-comment"></i> <span>{% trans 'Discount Types' %} </span></a>
+							</li>
+							<li> 
+								<a href="{% url 'settings:employee-status-List-Create' %}"><i class="la la-rocket"></i> <span>{% trans 'Employee Status' %} </span></a>
+							</li>
+							<li> 
+								<a href="{% url 'settings:follower-types-List-Create' %}"><i class="la la-cogs"></i> <span>{% trans 'Follower Types' %} </span></a>
+							</li>
+							<li> 
+								<a href="{% url 'settings:insurance-class-List-Create' %}"><i class="la la-comment"></i> <span>{% trans 'Insurance Class' %}  </span></a>
+							</li>
+							<li> 
+								<a href="{% url 'settings:insurance-company-List-Create' %}"><i class="la la-rocket"></i> <span>{% trans 'Insurance Company ' %} </span></a>
+							</li>
+
+							<li> 
+								<a href="{% url 'settings:job-grade-List-Create' %}"><i class="la la-cogs"></i> <span>{% trans 'Job Grades ' %}</span></a>
+							</li>
+							<li> 
+								<a href="{% url 'settings:project-periority-List-Create' %}"><i class="la la-rocket"></i> <span>{% trans 'Project Periority' %}  </span></a>
+							</li>
+							<li> 
+								<a href="{% url 'settings:project-status-List-Create' %}"><i class="la la-cogs"></i> <span>{% trans 'Project Status ' %} </span></a>
+							</li>
+							<li {% if qualification_list %} class="active" {% endif %}> 
+								<a href="{% url 'settings:qualifications-List-Create' %}"><i class="la la-comment"></i> <span>{% trans 'Qualifications' %}   </span></a>
+							</li>
+							<li> 
+								<a href="{% url 'settings:reason-to-terminate-List-Create' %}"><i class="la la-rocket"></i> <span>{% trans 'Reasons To Terminate ' %}</span></a>
+							</li>
+							<li> 
+								<a href="{% url 'settings:replacement-period-List-Create' %}"><i class="la la-cogs"></i> <span>{% trans 'Replacement Periods' %}  </span></a>
+							</li>
+							<li> 
+								<a href="{% url 'settings:replacement-type-List-Create' %}"><i class="la la-comment"></i> <span>{% trans 'Replacement Types' %} </span></a>
+							</li>
+							<li> 
+								<a href="{% url 'settings:salary-pay-types-List-Create' %}"><i class="la la-rocket"></i> <span>{% trans 'Salary Pay Types ' %} </span></a>
+							</li>
+							<li> 
+								<a href="{% url 'settings:salary-type-List-Create' %}"><i class="la la-cogs"></i> <span>{% trans 'Salary Types' %}   </span></a>
+							</li>
+							<li> 
+								<a href="{% url 'settings:ticket-type-List-Create' %}"><i class="la la-comment"></i> <span>{% trans 'Ticket Types ' %}  </span></a>
+							</li>
+
+						</ul>
+					</div>
+                </div>
+            </div>
+			<!-- /Sidebar -->
+			
+			<!-- Page Wrapper -->
+            {% block content %}
+              
+            {% endblock content %}
+			<!-- /Page Wrapper -->
+			{% for message in messages %}
+				<div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
+					{{message}}
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+		{% endfor %}
+
+        </div>
+		<!-- /Main Wrapper -->
+		<style>
+			.alert{
+				position: fixed;
+				top: 62px;
+				right: 37%;
+			}
+		</style>
+
+		<!-- jQuery -->
+        <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+
+		<!-- Bootstrap Core JS -->
+        <script src="{% static 'js/popper.min.js' %}"></script>
+
+		{% if LANGUAGE_CODE == 'en' %}
+			<script src="{% static 'js/bootstrap.min.js' %}"></script>
+		{% endif %}
+        
+		
+		{% if LANGUAGE_CODE == 'ar' %}
+			<script src="{% static 'plugins/bootstrap-rtl/js/bootstrap.min.js' %}"></script>
+		{% endif %}
+
+		<!-- Slimscroll JS -->
+		<script src="{% static 'js/jquery.slimscroll.min.js' %}"></script>
+
+		<!-- Custom JS -->
+		<script src="{% static 'js/app.js' %}"></script>
+
+		<script>
+			window.setTimeout(function() {
+				$(".alert").fadeTo(500, 0).slideUp(500, function(){
+					$(this).remove(); 
+				});
+			}, 4000);
+		</script>
+		
+    </body>
+</html>

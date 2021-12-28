@@ -1,0 +1,22 @@
+-------------------- Auto-Git Log --------------------
+		Wed Oct 13 2021 12:49:24 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/forms.py
+* accounts/models.py
+* accounts/templates/includes/employee/employee_create.html
+* db.sqlite3
+* hr/views.py
+
+
+Created files:
+* .autogit/logs/log-13-9-2021-12-19-14.txt
+* accounts/migrations/0005_alter_userprofile_join_date.py
+* accounts/migrations/0006_alter_userprofile_visa_number.py
+
+
+Deleted files:
+
+
+Renamed files:

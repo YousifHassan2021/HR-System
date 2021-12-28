@@ -1,0 +1,23 @@
+-------------------- Auto-Git Log --------------------
+		Sat Sep 18 2021 19:20:00 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* missed.md
+* project/urls.py
+* settings.md
+* settings/forms.py
+* settings/templates/settings/asset_condition.html
+* settings/views.py
+
+
+Created files:
+* .autogit/logs/log-18-8-2021-18-49-50.txt
+* settings/urls.py
+
+
+Deleted files:
+* settings/templates/settings/urls.py
+
+
+Renamed files:

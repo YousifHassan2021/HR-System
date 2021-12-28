@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block body %}	
+			<!-- Page Wrapper -->
+            <div class="page-wrapper">
+			
+				<!-- Page Content -->
+                <div class="content container-fluid">
+				
+					<!-- Page Header -->
+					<div class="page-header">
+						<div class="row align-items-center">
+							<div class="col">
+								<h3 class="page-title">{% trans 'Projects' %}</h3>
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item"><a href="">{% trans 'Dashboard' %}</a></li>
+									<li class="breadcrumb-item active">{% trans 'Projects' %}</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- /Page Header -->
+					
+					<!-- Search Filter -->
+					<div class="row filter-row">
+						<div class="col-sm-6 col-md-3">  
+							<div class="form-group form-focus">
+								<input type="text" class="form-control floating">
+								<label class="focus-label">{% trans 'Project Name' %}</label>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3">  
+							<div class="form-group form-focus">
+								<input type="text" class="form-control floating">
+								<label class="focus-label">Employee Name</label>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3"> 
+							<div class="form-group form-focus select-focus">
+								<select class="select floating"> 
+									<option>Select Roll</option>
+									<option>Web Developer</option>
+									<option>Web Designer</option>
+									<option>Android Developer</option>
+									<option>Ios Developer</option>
+								</select>
+								<label class="focus-label">Designation</label>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3">  
+							<a href="#" class="btn btn-success btn-block"> Search </a>  
+						</div>     
+                    </div>
+					<!-- Search Filter -->
+					
+					<div class="row">
+
+						
+						{% for project in projects %}						
+							<div class="col-lg-4 col-sm-6 col-md-4 col-xl-3">
+								<div class="card">
+									<div class="card-body">
+										<h4 class="project-title"><a href="{% url 'employee:project_detail' project.id %}">{{project.name}}</a></h4>
+										
+										<p class="text-muted">{{project.description}}
+										</p>
+										<div class="pro-deadline m-b-15">
+											<div class="sub-title">
+												{% trans 'Deadline' %}:
+											</div>
+											<div class="text-muted">
+												{{project.end_date}}
+											</div>
+										</div>
+										<div class="project-members m-b-15">
+											<div>{% trans 'Project Leader' %} :</div>
+											<ul class="team-members">
+												<li>
+													<a href="#" data-toggle="tooltip" title="{{project.leader}}"><img alt="" src="{{project.leader.user_profile.image.url}}"></a>
+												</li>
+											</ul>
+										</div>
+										<div class="project-members m-b-15">
+											<div>{% trans 'Team' %} :</div>
+											<ul class="team-members">
+												
+												{% for employee in project.team.all %}	
+													<li>
+														<a href="#" data-toggle="tooltip" title="{{employee}}"><img alt="" src="{{employee.user_profile.image.url}}"></a>
+													</li>
+												{% endfor %}
+
+											</ul>
+										</div>
+									
+									</div>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+                </div>
+				<!-- /Page Content -->
+				
+            </div>
+			<!-- /Page Wrapper -->
+{% endblock body %}

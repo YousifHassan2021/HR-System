@@ -1,0 +1,17 @@
+{% load i18n %}
+{% load bootstrap4 %}
+<div class="modal-header">
+    <h5 class="modal-title">{% trans 'Add New Addition' %}</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <form method="POST" class="overtime_create_from" action="{% url 'hr:payroll_overtime_create' %}">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% buttons %}
+        <button type="submit" class="btn btn-primary">{% trans 'Submit' %}</button>
+        {% endbuttons %}
+    </form>
+</div>

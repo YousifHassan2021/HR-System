@@ -1,0 +1,21 @@
+-------------------- Auto-Git Log --------------------
+		Sat Sep 11 2021 20:22:42 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* employee/urls.py
+* managers/urls.py
+* missed.md
+* templates/base.html
+* templates/employee_base.html
+* templates/manager_base.html
+
+
+Created files:
+* .autogit/logs/log-11-8-2021-19-52-32.txt
+
+
+Deleted files:
+
+
+Renamed files:

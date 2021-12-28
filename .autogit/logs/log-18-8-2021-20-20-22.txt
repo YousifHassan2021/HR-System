@@ -1,0 +1,44 @@
+-------------------- Auto-Git Log --------------------
+		Sat Sep 18 2021 20:20:22 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* missed.md
+* settings/models.py
+* settings/templates/settings/asset_condition.html
+* settings/templates/settings/bank_names.html
+* settings/templates/settings/branch.html
+* settings/templates/settings/city.html
+* settings/templates/settings/insurance_class.html
+* settings/templates/settings/insurance_company.html
+* settings/urls.py
+* settings/views.py
+* templates/settings_base.html
+
+
+Created files:
+* .autogit/logs/log-18-8-2021-19-50-11.txt
+* settings/migrations/0002_branch_name.py
+* settings/templates/settings/asset_status.html
+* settings/templates/settings/discount_types.html
+* settings/templates/settings/employee_status.html
+* settings/templates/settings/job_grade.html
+* settings/templates/settings/project_periority.html
+* settings/templates/settings/project_status.html
+* settings/templates/settings/qualifications.html
+* settings/templates/settings/reason_to_terminate.html
+* settings/templates/settings/replacement_period.html
+* settings/templates/settings/replacement_type.html
+
+
+Deleted files:
+* settings/templates/settings/attendance_types.html.html
+* settings/templates/settings/discount_types.html.html
+* settings/templates/settings/employee_status.html.html
+
+
+Renamed files:
+* [object Object]
+* [object Object]
+* [object Object]
+* [object Object]

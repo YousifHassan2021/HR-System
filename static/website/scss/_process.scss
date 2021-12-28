@@ -1,0 +1,320 @@
+/* 14. process */
+.process {
+    &__icon {
+        background: $grey;
+        width: 85px;
+        height: 85px;
+        text-align: center;
+        line-height: 85px;
+        border-radius: 12px 12px 0 12px;
+        @include transition(.3s);
+    }
+    &__text {
+        font-size: 20px;
+    }
+}
+.float-bob {
+    animation: float-bob-y infinite 3s linear;
+}
+
+//dashbord--area
+.red_btn {
+    color: $white;
+    background: $red;
+}
+
+//dashbord-area
+.dashbord-img {
+    & img {
+        @media #{$lp} {
+            width: 100%;
+        }
+        @media #{$xl} {
+            width: 100%;
+        }
+        @media #{$lg} {
+            width: 100%;
+        }
+        @media #{$md} {
+            width: 100%;
+        }
+        @media #{$xs} {
+            width: 100%;
+        }
+    }
+}
+.dashbord-wrapper {
+    @media #{$lg} {
+        padding-right: 0;
+    }
+    @media #{$md} {
+        padding-right: 0;
+    }
+    @media #{$xs} {
+        padding-right: 0;
+    }
+}
+
+//customize-area
+.customize_wrapper {
+    @media #{$lg} {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    @media #{$xs} {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+//process_02
+.process_02 {
+    padding: 30px 55px;
+    @media #{$md} {
+        padding: 30px 0px;
+    }
+    @media #{$xs} {
+        padding: 30px 0px;
+    }
+    @include transition(.3s);
+    &__icon {
+        border-radius: 50%;
+        background-image: -moz-linear-gradient( 45deg, rgb(40,105,249) 0%, rgb(73,39,206) 100%);
+        background-image: -webkit-linear-gradient( 45deg, rgb(40,105,249) 0%, rgb(73,39,206) 100%);
+        background-image: -ms-linear-gradient( 45deg, rgb(40,105,249) 0%, rgb(73,39,206) 100%);
+        width: 145px;
+        height: 145px;
+        display: inline-block;
+        line-height: 180px;
+        position: relative;
+        @include transition(.3s);
+        &::before {
+            content: '\f00c';
+			position: absolute;
+            font-family: "Font Awesome 5 pro";
+            font-size: 12px;
+            color: $heding2;
+			right: -5px;
+            top: -20px;
+            background: $yellow-2;
+			width: 35px;
+            height: 35px;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            z-index: 2;
+            @include transition(.4s);
+        }
+        &::after {
+            content: '';
+			position: absolute;
+			right: -18px;
+            top: -22px;
+			width: 180px;
+            height: 190px;
+            display: inline-block;
+            border-radius: 50%;
+            border: 2px dashed $white8;
+            z-index: 1;
+            @include transition(.4s);
+        }
+        & i {
+            color: $white;
+            font-size: 75px;
+            line-height: 1;
+        }
+    } 
+    & h4 {
+        color: $heding2;
+        @media #{$md} {
+            font-size: 20px;
+        }
+    }
+}
+.dashbord_img-02 {
+    & img {
+        @media #{$lg} {
+            width: 100%;
+        }
+        @media #{$md} {
+            width: 100%;
+        }
+        @media #{$xs} {
+            width: 100%;
+        }
+    }
+}
+
+// process-area-06
+.process-area-06{
+    @media #{$sm}{
+        padding-bottom: 40px;
+    }
+    @media #{$xs}{
+        padding-bottom: 40px;
+    }
+    & .process_wrapper{
+        & .section-title{
+            & h2 {
+                font-size: 47px;
+                @media #{$xs}{
+                    font-size: 35px;
+                }
+            }
+        }
+        & .process__icon{
+            background: $white1;
+            width: 70px;
+            height: 70px;
+            text-align: center;
+            line-height: 85px;
+            border-radius: 50px;
+            line-height: 80px;
+            & i{
+                font-size: 24px;
+	            color: $theme-color;
+                transition: .3s;
+            }
+            @media #{$xs}{
+                width: 50px;
+                height: 50px;
+                flex: 0 0 auto;
+                margin-right: 20px;
+                line-height: 55px;
+            }
+        }
+        & .process__text{
+            &  h5 {
+                font-size: 20px;
+            }
+        }
+        & .process {
+            transition: .3s;
+            &:hover{
+                & .process__icon {
+                    background: $theme-color;
+                    & i {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// home 04
+.process_wrapper_green {
+    @media #{$md}{
+        margin-left: 0;
+    }
+    @media #{$sm}{
+        margin-left: 0;
+    }
+    @media #{$xs}{
+        margin-left: 0;
+    }
+    & .process__icon {
+        background: $white !important;
+        & i {
+            color: $theme-color4 !important;
+        }
+    }
+    & .process {
+        transition: all .3s;
+        &:hover {
+            & .process__icon {
+                background: $theme-color4 !important;
+                & i {
+                    color: $white !important;
+                }
+            }
+        }
+    }
+}
+
+// shape-animated
+.shape-animated {
+    position: relative;
+    padding-top: 440px;
+    @media #{$sm}{
+        padding-top: 80px;
+    }
+    @media #{$xs}{
+        padding-top: 80px;
+    }
+    & .process-shape {
+        & img {
+            position: absolute;
+        }
+    }
+  
+    & .shape-one {
+        left: 110px;
+        top: 80px;
+        max-width: 100%;
+        animation: pulse infinite 2s linear;
+        @media #{$md}{
+            left: 50px;
+        }
+
+    }
+    & .shape-two {
+            right: 155px;
+            top: 40%;
+            animation: animationFramesTwo 10s infinite linear;
+    }
+    & .shape-three {
+            right: 195px;
+            bottom: 145px;
+            animation: animationFramesOne 15s infinite linear;
+    }
+}
+
+.do__box-inner {
+    position: relative;
+    z-index: 99;
+}
+.video-area-h4{
+    position: relative;
+    z-index: 55;
+}
+
+.process-area {
+    @media #{$xs}{
+        padding-top: 75px;
+        padding-bottom: 10px;
+    }
+}
+.process-area.process-area-06{
+    @media #{$xs}{
+        padding-bottom: 40px;
+    }
+} 
+
+.benefit-area.pos-rel{
+    @media #{$xs}{
+        padding-bottom: 40px;
+    }
+}
+
+.row.align-items-center.pr-padding {
+    @media #{$xs}{
+        padding-bottom: 30px;
+    }
+}
+.dashbord-area.black-bg4.pt-90.pb-40 {
+    @media #{$xs}{
+        padding-top: 75px;
+    }
+}
+.testimonial-area-02.testimonial-area-06.pos-rel.grey-bg.pt-125.pb-130 {
+    @media #{$xs}{
+        padding-top: 75px;
+        padding-bottom: 80px;
+    }
+}
+
+
+
+

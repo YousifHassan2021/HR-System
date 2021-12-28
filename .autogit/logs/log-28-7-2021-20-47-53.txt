@@ -1,0 +1,23 @@
+-------------------- Auto-Git Log --------------------
+		Sat Aug 28 2021 20:47:53 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* hr/templates/hr/termination.html
+* hr/urls.py
+* hr/views.py
+* missed.md
+* settings/forms.py
+* settings/models.py
+* templates/base.html
+
+
+Created files:
+* hr/templates/hr/holidays.html
+* settings/migrations/0004_holiday.py
+
+
+Deleted files:
+
+
+Renamed files:

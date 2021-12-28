@@ -1,0 +1,23 @@
+-------------------- Auto-Git Log --------------------
+		Wed Aug 25 2021 19:18:54 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/admin.py
+* accounts/forms.py
+* hr/templates/hr/assets.html
+* hr/urls.py
+* hr/views.py
+* settings/admin.py
+* settings/models.py
+* templates/base.html
+
+
+Created files:
+* hr/templates/hr/payroll-items.html
+
+
+Deleted files:
+
+
+Renamed files:

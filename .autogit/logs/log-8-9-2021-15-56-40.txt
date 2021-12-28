@@ -1,0 +1,25 @@
+-------------------- Auto-Git Log --------------------
+		Fri Oct 08 2021 15:56:40 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* db.sqlite3
+* hr/templates/hr/profile.html
+* hr/templates/hr/promotion.html
+* hr/templates/hr/salary.html
+* hr/templates/hr/training-type.html
+* hr/templates/hr/training.html
+* locale/ar/LC_MESSAGES/django.po
+* project/settings.py
+* project/urls.py
+* templates/base.html
+
+
+Created files:
+* .autogit/logs/log-8-9-2021-15-26-27.txt
+
+
+Deleted files:
+
+
+Renamed files:

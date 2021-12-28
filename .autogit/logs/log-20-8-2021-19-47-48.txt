@@ -1,0 +1,27 @@
+-------------------- Auto-Git Log --------------------
+		Mon Sep 20 2021 19:47:48 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/models.py
+* accounts/views.py
+* hr/templates/hr/dashboard.html
+* missed.md
+* project/settings.py
+* settings/models.py
+* templates/base.html
+* templates/settings_base.html
+
+
+Created files:
+* accounts/migrations/0003_remove_userprofile_user_role.py
+* media/icon/2000px-instagram_logo_2016svg-2000x2000.png
+* media/logo/RPC-JP_Logo.png
+* settings/migrations/0003_auto_20210920_1725.py
+* utils/company_info_context_processor.py
+
+
+Deleted files:
+
+
+Renamed files:

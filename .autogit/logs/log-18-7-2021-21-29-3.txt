@@ -1,0 +1,33 @@
+-------------------- Auto-Git Log --------------------
+		Wed Aug 18 2021 21:29:03 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/migrations/0001_initial.py
+* hr/templates/hr/jobs.html
+* hr/views.py
+* managers/migrations/0001_initial.py
+* settings/forms.py
+* settings/migrations/0001_initial.py
+* settings/models.py
+
+
+Created files:
+* .autogit/logs/log-18-7-2021-20-58-52.txt
+
+
+Deleted files:
+* accounts/migrations/0002_userprofile_user_role.py
+* accounts/migrations/0003_auto_20210807_1956.py
+* accounts/migrations/0004_auto_20210807_2009.py
+* accounts/migrations/0005_userprofile_first_login.py
+* accounts/migrations/0006_userattendance.py
+* accounts/migrations/0007_alter_userattendance_date.py
+* accounts/migrations/0008_auto_20210816_1752.py
+* accounts/migrations/0009_alter_userattendance_time_out.py
+* accounts/migrations/0010_alter_userattendance_time_out.py
+* accounts/migrations/0011_auto_20210816_1808.py
+* settings/migrations/0002_defaultpassword.py
+
+
+Renamed files:

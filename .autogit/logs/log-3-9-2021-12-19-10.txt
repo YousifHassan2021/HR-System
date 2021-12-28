@@ -1,0 +1,23 @@
+-------------------- Auto-Git Log --------------------
+		Sun Oct 03 2021 12:19:10 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/static/accounts/js/employee_ajax_form.js
+* accounts/templates/accounts/employees.html
+* accounts/templates/includes/employee/employee_create.html
+* accounts/templates/includes/employee/employee_delete.html
+* accounts/templates/includes/employee/employee_list.html
+* accounts/templates/includes/employee/employee_update.html
+* hr/templates/includes/asset_create.html
+* hr/views.py
+
+
+Created files:
+* .autogit/logs/log-3-9-2021-11-49-0.txt
+
+
+Deleted files:
+
+
+Renamed files:

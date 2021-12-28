@@ -1,0 +1,22 @@
+-------------------- Auto-Git Log --------------------
+		Mon Aug 09 2021 21:45:14 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/forms.py
+* accounts/models.py
+* hr/templates/hr/employees.html
+* hr/views.py
+* settings/admin.py
+* settings/models.py
+
+
+Created files:
+* accounts/migrations/0005_userprofile_first_login.py
+* settings/migrations/0002_defaultpassword.py
+
+
+Deleted files:
+
+
+Renamed files:

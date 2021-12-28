@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Mon Sep 20 2021 20:17:58 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/views.py
+* hr/templates/hr/dashboard.html
+* missed.md
+* templates/base.html
+
+
+Created files:
+* .autogit/logs/log-20-8-2021-19-47-48.txt
+
+
+Deleted files:
+
+
+Renamed files:

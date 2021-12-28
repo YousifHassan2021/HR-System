@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Wed Oct 13 2021 13:19:35 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/models.py
+* db.sqlite3
+
+
+Created files:
+* .autogit/logs/log-13-9-2021-12-49-24.txt
+* accounts/migrations/0007_auto_20211013_1104.py
+
+
+Deleted files:
+
+
+Renamed files:

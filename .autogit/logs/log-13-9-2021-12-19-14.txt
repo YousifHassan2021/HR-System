@@ -1,0 +1,26 @@
+-------------------- Auto-Git Log --------------------
+		Wed Oct 13 2021 12:19:14 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/forms.py
+* accounts/models.py
+* accounts/urls.py
+* accounts/views.py
+* db.sqlite3
+* hr/urls.py
+* hr/views.py
+* missed.md
+* project/settings.py
+* templates/base.html
+
+
+Created files:
+* media/attachements_img/03-2.png
+
+
+Deleted files:
+
+
+Renamed files:
+* [object Object]

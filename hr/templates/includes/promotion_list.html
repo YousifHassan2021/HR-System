@@ -1,0 +1,26 @@
+{% load i18n %}
+{% for promotion in object_list  %}
+<tr>
+    <td>{{forloop.counter}}</td>
+    <td>
+        <h2 class="table-avatar blue-link">
+            <a href="profile.html" class="avatar"><img alt="" src="{{promotion.user_promotion_requests.user_profile.image.url}}"></a>
+            <a href="profile.html">{{promotion.user.username}}</a>
+        </h2>
+    </td>
+    <td>{{promotion.from_type}}</td>
+    <td>{{promotion.from_grade}}</td>
+    <td>{{promotion.to_type}}</td>
+    <td>{{promotion.to_grade}}</td>
+    <td>{{promotion.date}}</td>
+    <td class="text-right">
+        <div class="dropdown dropdown-action">
+            <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <button class="btn btn-info btn-sm-x  js-update" data-url="{% url 'hr:promotion_edit' promotion.id %}"><i class="fa fa-pencil m-r-5"></i> {% trans 'Edit' %} </button>
+                <button class="btn btn-danger btn-sm-x js-delete" data-url="{% url 'hr:promotion_delete' promotion.id %}"><i class="fa fa-trash-o m-r-5"></i> {% trans 'Delete' %} </button>
+            </div>
+        </div>
+    </td>
+</tr>
+{% endfor %}

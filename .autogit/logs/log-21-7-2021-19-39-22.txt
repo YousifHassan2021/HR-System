@@ -1,0 +1,25 @@
+-------------------- Auto-Git Log --------------------
+		Sat Aug 21 2021 19:39:22 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/models.py
+* hr/urls.py
+* hr/views.py
+
+
+Created files:
+* accounts/migrations/0002_userprofile_join_date.py
+* hr/templates/hr/employee-reports.html
+* hr/templates/hr/salary-detail.html
+* hr/templates/hr/salary.html
+* media/projects/439-4397303_programmers-png-transparent-png.png
+* media/user_contract/490-4905098_programming-illustration-images-png-transparent-png.png
+* media/user_img/27-275977_coding-icon-hd-png-download1.png
+* media/user_residence/Blog_The-future-of-software-is-no-code_Cloud-disruption-has-made-technolo_TLzcJ9v.png
+
+
+Deleted files:
+
+
+Renamed files:

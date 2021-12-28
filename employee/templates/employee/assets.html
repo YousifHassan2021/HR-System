@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block body %}	
+			<!-- Page Wrapper -->
+            <div class="page-wrapper">
+			
+				<!-- Page Content -->
+                <div class="content container-fluid">
+				
+					<!-- Page Header -->
+					<div class="page-header">
+						<div class="row align-items-center">
+							<div class="col">
+								<h3 class="page-title">{% trans 'Assets' %}</h3>
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item"><a href="">{% trans 'Dashboard' %}</a></li>
+									<li class="breadcrumb-item active">{% trans 'Assets' %}</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- /Page Header -->
+					
+
+					
+					<div class="row">
+						<div class="col-md-12">
+							<div class="table-responsive">
+								<table class="table table-striped custom-table mb-0 datatable">
+									<thead>
+										<tr>
+											<th>{% trans 'Asset Name' %}</th>
+											<th>{% trans 'Asset Id' %}</th>
+											<th>{% trans 'Purchase Date' %}</th>
+											<th>{% trans 'Warrenty' %}</th>
+											<th>{% trans 'Warrenty End' %}</th>
+											<th>{% trans 'Amount' %}</th>
+											<th class="text-center">{% trans 'Status' %}</th>
+											
+										</tr>
+									</thead>
+									<tbody>
+										{% for object in my_assets %}	
+											<tr>
+												<td>
+													<strong>{{object.asset.name}}</strong>
+												</td>
+												<td>{{object.asset.asset_id}}</td>
+												<td>{{object.asset.purchase_date}}</td>
+												<td>{{object.asset.warranty}}</td>
+												<td>{{object.asset.warranty_end}}</td>
+												<td>${{object.asset.amount}}</td>
+												<td> {{object.status}}</td>
+											</tr>
+										{% endfor %}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+                </div>
+				<!-- /Page Content -->
+			
+
+            </div>
+			<!-- /Page Wrapper -->
+			{% endblock body %}

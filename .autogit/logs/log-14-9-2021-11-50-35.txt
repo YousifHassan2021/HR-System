@@ -1,0 +1,23 @@
+-------------------- Auto-Git Log --------------------
+		Thu Oct 14 2021 11:50:35 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* db.sqlite3
+* hr/templates/hr/departments.html
+* hr/templates/hr/holidays.html
+* hr/templates/hr/training.html
+* managers/templates/includes/project_list.html
+* managers/views.py
+* missed.md
+
+
+Created files:
+* .autogit/logs/log-13-9-2021-13-19-35.txt
+* media/projects/16ddd29feeaf15c8194ee0a914559388.jpg
+
+
+Deleted files:
+
+
+Renamed files:

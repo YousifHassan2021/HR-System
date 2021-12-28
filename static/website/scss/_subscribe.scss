@@ -1,0 +1,57 @@
+/* 18. subscribe */
+.subscribe-area {
+    background-size: cover;
+    @media #{$sm}{
+        padding-top: 75px;
+        padding-bottom: 70px;
+    }
+    @media #{$xs}{
+        padding-top: 75px;
+        padding-bottom: 70px;
+    }
+    & .section-title{
+        & h2{
+            @media #{$xs} {
+                font-size: 27px;
+            }
+        }
+    }
+    & .foter-subscribe {
+        & input {
+            color: $heding2;
+            font-size: 14px;
+            height: 85px;
+            width: 100%;
+            border: 0;
+            padding: 0 27px;
+            position: relative;
+        }
+        & .subs-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            @media #{$xs}{
+                position: static;
+                margin-top: 30px;
+                float: left;
+            }
+        }
+    }
+    & .pricing-form{
+        & input {
+            border: 2px solid $border1;
+        }
+    }
+}
+.subscribe-box {
+    &.input-border{
+        & .foter-subscribe {
+            & input {
+                border: 1px solid $border1 !important;
+            }
+        }
+    }
+}
+
+
+

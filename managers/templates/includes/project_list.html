@@ -1,0 +1,49 @@
+{% load i18n %}
+{% for project in object_list %}						
+<div class="col-lg-4 col-sm-6 col-md-4 col-xl-3">
+    <div class="card">
+        <div class="card-body">
+            {% if request.user.is_manager %}
+                <div class="dropdown dropdown-action profile-action">
+                    <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <button class="btn btn-info btn-sm js-update" data-url="{% url 'manager:project_edit' project.id %}">{% trans 'Edit' %}  </button>
+                        <button class="btn btn-danger btn-sm js-delete" data-url="{% url 'manager:project_delete' project.id %}">{% trans 'Delete' %}  </button>
+                    </div>
+                </div>
+            {% endif %}
+            <h4 class="project-title"><a href="{% url 'accounts:project_detail' project.id %}">{{project.name}}</a></h4>
+            <p class="text-muted">{{project.description}}
+            </p>
+            <div class="pro-deadline m-b-15">
+                <div class="sub-title">
+                    {% trans 'Deadline' %}:
+                </div>
+                <div class="text-muted">
+                    {{project.end_date}}
+                </div>
+            </div>
+            <div class="project-members m-b-15">
+                <div>{% trans 'Project Leader' %} :</div>
+                <ul class="team-members">
+                    <li>
+                        <a href="#" data-toggle="tooltip" title="{{project.leader}}"><img alt="" src="{{project.leader.user_profile.image.url}}"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="project-members m-b-15">
+                <div>{% trans 'Team' %} :</div>
+                <ul class="team-members">
+                    
+                    {% for employee in project.team.all %}	
+                        <li>
+                            <a href="#" data-toggle="tooltip" title="{{employee}}">{% if employee.user_profile.image %}<img alt="" src="{{employee.user_profile.image.url}}"> {% endif %}</a>
+                        </li>
+                    {% endfor %}
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}

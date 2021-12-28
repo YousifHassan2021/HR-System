@@ -1,0 +1,23 @@
+-------------------- Auto-Git Log --------------------
+		Sat Aug 07 2021 22:06:20 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/admin.py
+* accounts/models.py
+* hr/templates/hr/employees.html
+* hr/urls.py
+* hr/views.py
+
+
+Created files:
+* accounts/migrations/0002_userprofile_user_role.py
+* accounts/migrations/0003_auto_20210807_1956.py
+* media/attachements_img/Learn-Python-in-Arabic.jpg
+* media/attachements_img/Learn-Python-in-Arabic_WlU7O1m.jpg
+
+
+Deleted files:
+
+
+Renamed files:

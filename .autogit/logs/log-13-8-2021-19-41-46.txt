@@ -1,0 +1,49 @@
+-------------------- Auto-Git Log --------------------
+		Mon Sep 13 2021 19:41:46 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/admin.py
+* accounts/migrations/0001_initial.py
+* accounts/models.py
+* hr/migrations/0001_initial.py
+* hr/models.py
+* hr/urls.py
+* managers/migrations/0001_initial.py
+* managers/models.py
+* project/settings.py
+* settings/migrations/0001_initial.py
+* settings/models.py
+
+
+Created files:
+* accounts/migrations/0002_initial.py
+
+
+Deleted files:
+* accounts/migrations/0002_userprofile_join_date.py
+* accounts/migrations/0003_userjob_experience_years.py
+* accounts/migrations/0004_auto_20210821_1759.py
+* accounts/migrations/0005_auto_20210821_1801.py
+* accounts/migrations/0006_rename_coust_usertraining_cost.py
+* accounts/migrations/0007_alter_usertraining_employees.py
+* accounts/migrations/0008_auto_20210823_1823.py
+* accounts/migrations/0009_userfollowers_follower_type.py
+* accounts/migrations/0010_usertermination.py
+* accounts/migrations/0011_alter_userovertime_total_over_time_hours.py
+* accounts/migrations/0012_auto_20210901_1736.py
+* accounts/migrations/0013_userovertime_hour_equal.py
+* accounts/migrations/0014_alter_userovertime_options.py
+* hr/migrations/0002_alter_announcement_created_at.py
+* managers/migrations/0002_project_manager.py
+* managers/migrations/0003_project_status.py
+* settings/migrations/0002_auto_20210823_1834.py
+* settings/migrations/0003_followertype.py
+* settings/migrations/0004_holiday.py
+* settings/migrations/0005_reasontoterminate.py
+* settings/migrations/0006_projectstatus.py
+* settings/migrations/0007_delete_projectstatus.py
+* settings/migrations/0008_projectstatus.py
+
+
+Renamed files:

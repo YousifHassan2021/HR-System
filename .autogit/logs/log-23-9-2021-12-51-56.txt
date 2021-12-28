@@ -1,0 +1,25 @@
+-------------------- Auto-Git Log --------------------
+		Sat Oct 23 2021 12:51:56 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/forms.py
+* hr/urls.py
+* hr/views.py
+* templates/base.html
+
+
+Created files:
+* hr/static/hr/handel_payroll_overtime.js
+* hr/templates/hr/payroll-overtime.html
+* hr/templates/includes/payroll_overtime_create.html
+* hr/templates/includes/payroll_overtime_delete.html
+* hr/templates/includes/payroll_overtime_list.html
+* hr/templates/includes/payroll_overtime_update.html
+
+
+Deleted files:
+
+
+Renamed files:
+* [object Object]

@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Wed Oct 20 2021 12:06:59 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* Workflow.md
+* website/views.py
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

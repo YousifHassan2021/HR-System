@@ -1,0 +1,87 @@
+/* 20.team_details */
+.team-social-link{
+    & a {
+        margin-right: 30px;
+        @media #{$lg}{
+            margin-right: 25px;
+        }
+        @media #{$xs}{
+            margin-right: 10px;
+            display: inline-block;
+        }
+        & i {
+            margin-right: 10px;
+            &.fab.fa-facebook {
+                color: $facebook;
+            }
+            &.fab.fa-twitter-square {
+                color: $twitter;
+            }
+            &.fab.fa-youtube {
+                color: $youtube;
+            }
+            &.fab.fa-linkedin {
+                color: $linkedin;
+            }
+        }
+    }
+}
+
+.contact-list {
+    & li{
+        padding-left: 0;
+        font-size: 22px;
+        color: $body-text-color;
+        display: table;
+        @media #{$xs}{
+            font-size: 18px;
+        }
+        & span {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        &::before {
+            display: none;
+        }
+        & i {
+            font-size: 30px;
+            color: $theme-color;
+            margin-right: 15px;
+            @media #{$xs}{
+                font-size: 18px;
+            }
+        }
+    }
+}
+.contact__input {
+	width: 100%;
+	background: $grey;
+	border: none;
+	margin-bottom: 30px;
+	height: 60px;
+    padding: 0 30px;
+    &:last-child {
+        margin-bottom: 25px;
+    }
+}
+.contact__input-messege {
+    height: 170px;
+    &::placeholder{
+        padding-top: 0;
+    }
+}
+
+.form {
+    & textarea {
+        padding-top: 16px;
+    }
+}
+
+.row-border-bottom {
+    border-bottom: 1px solid $border1;
+    margin-left: 2px;
+    margin-right: 2px;
+    @media #{$xs}{
+        padding-top: 28px;
+    }
+}

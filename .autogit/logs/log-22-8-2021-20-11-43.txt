@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Wed Sep 22 2021 20:11:43 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* db.sqlite3
+* hr/static/hr/handel_ajax.js
+* hr/templates/hr/departments.html
+* hr/templates/includes/departments_update.html
+* hr/views.py
+
+
+Created files:
+* .autogit/logs/log-22-8-2021-19-41-33.txt
+
+
+Deleted files:
+
+
+Renamed files:

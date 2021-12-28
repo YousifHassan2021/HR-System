@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Wed Aug 18 2021 20:28:42 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* hr/templates/hr/departments.html
+* hr/templates/hr/employees.html
+* hr/urls.py
+* hr/views.py
+
+
+Created files:
+* .autogit/logs/log-16-7-2021-20-20-44.txt
+* settings/forms.py
+
+
+Deleted files:
+
+
+Renamed files:

@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% load bootstrap4 %}
+{% block body %}
+
+			<!-- Page Wrapper -->
+            <div class="page-wrapper">
+			
+				<!-- Page Content -->
+                <div class="content container-fluid">
+				
+					<!-- Page Header -->
+					<div class="page-header">
+						<div class="row align-items-center">
+							<div class="col">
+								<h3 class="page-title">{% trans 'Assets' %}</h3>
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item"><a href="">{% trans 'Dashboard' %}</a></li>
+									<li class="breadcrumb-item active">{% trans 'Assets' %}</li>
+								</ul>
+							</div>
+							<div class="col-auto float-right ml-auto">
+								<button class="btn add-btn js-create" data-url="{% url 'hr:asset_create' %}"><i class="fa fa-plus"></i>{% trans 'Add New' %} </button>
+							</div>
+						</div>
+					</div>
+					<!-- /Page Header -->
+					
+					<!-- Search Filter -->
+					<div class="row filter-row">
+						<div class="col-sm-6 col-md-3">  
+							<div class="form-group form-focus">
+								<input type="text" class="form-control floating">
+								<label class="focus-label">{% trans 'Employee Name' %}</label>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3"> 
+							<div class="form-group form-focus select-focus">
+								<select class="select floating"> 
+									<option value=""> -- Select -- </option>
+									<option value="0"> Pending </option>
+									<option value="1"> Approved </option>
+									<option value="2"> Returned </option>
+								</select>
+								<label class="focus-label">Status</label>
+							</div>
+						</div>
+						<div class="col-sm-12 col-md-4">  
+						   <div class="row">  
+							   <div class="col-md-6 col-sm-6">  
+									<div class="form-group form-focus">
+										<div class="cal-icon">
+											<input class="form-control floating datetimepicker" type="text">
+										</div>
+										<label class="focus-label">From</label>
+									</div>
+								</div>
+							   <div class="col-md-6 col-sm-6">  
+									<div class="form-group form-focus">
+										<div class="cal-icon">
+											<input class="form-control floating datetimepicker" type="text">
+										</div>
+										<label class="focus-label">To</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-2">  
+							<a href="#" class="btn btn-success btn-block"> Search </a>  
+						</div>     
+                    </div>
+					<!-- /Search Filter -->
+					
+					<div class="row">
+						<div class="col-md-12">
+							<div class="table-responsive">
+								<table class="table table-striped custom-table mb-0 datatable" id="asset-table">
+									<thead>
+										<tr>
+											<th>{% trans 'Asset User' %}</th>
+											<th>{% trans 'Asset Name' %}</th>
+											<th>{% trans 'Asset Id' %}</th>
+											<th>{% trans 'Purchase Date' %}</th>
+											<th>{% trans 'Warrenty' %}</th>
+											<th>{% trans 'Warrenty End' %}</th>
+											<th>{% trans 'Amount' %}</th>
+											<th class="text-center">{% trans 'Status' %}</th>
+											<th class="text-right"></th>
+										</tr>
+									</thead>
+									<tbody>										
+										{% include 'includes/asset_list.html' %}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+                </div>
+				<!-- /Page Content -->
+			
+				<!-- Add Asset Modal -->
+				<div id="add_asset" class="modal custom-modal fade" role="dialog">
+					<div class="modal-dialog modal-md" role="document">
+						<div class="modal-content">
+
+						</div>
+					</div>
+				</div>
+				<!-- /Add Asset Modal -->
+
+            </div>
+			<!-- /Page Wrapper -->
+			{% endblock body %}
+
+
+			{% block javascript %}
+			<script src="{% static 'hr/handel_asset_ajax.js' %}"></script>		  
+			{% endblock javascript %}

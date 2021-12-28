@@ -1,0 +1,27 @@
+-------------------- Auto-Git Log --------------------
+		Thu Oct 14 2021 12:50:55 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/admin.py
+* accounts/forms.py
+* accounts/models.py
+* db.sqlite3
+* employee/templates/employee/resignation.html
+* employee/urls.py
+* employee/views.py
+* locale/ar/LC_MESSAGES/django.mo
+* locale/ar/LC_MESSAGES/django.po
+* missed.md
+* settings/admin.py
+
+
+Created files:
+* .autogit/logs/log-14-9-2021-12-20-45.txt
+* accounts/migrations/0008_userresign_notice_date.py
+
+
+Deleted files:
+
+
+Renamed files:

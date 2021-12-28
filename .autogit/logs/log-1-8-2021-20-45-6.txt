@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Wed Sep 01 2021 20:45:06 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* employee/templates/employee/overtime.html
+* employee/templates/employee/projects.html
+* employee/urls.py
+* employee/views.py
+* templates/employee_base.html
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

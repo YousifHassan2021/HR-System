@@ -1,0 +1,108 @@
+{% extends 'website_base.html' %}
+{% load static %}
+{% block main %}
+  
+
+    <main>
+        <!-- page-title-area start -->
+        <div class="page-title-area d-flex align-items-center" data-background="{% static 'website/img/bg/breadcrumb.jpg' %}">
+            <div class="container text-center">
+                <div class="page-title">
+                    <h2>contact</h2>
+                        <div class="breadcrumb-menu">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb justify-content-center">
+                                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                  <li class="breadcrumb-item active" aria-current="page">contact</li>
+                                </ol>
+                              </nav>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <!-- page-title-area start -->
+
+        <!-- contact-area-start -->
+        <section class="contact-area pt-125 pb-120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-4 col-xl-4 col-lg-6">
+                        <div class="feature_wrapper_02 mb-30">
+                            <div class="section-title text-left mb-40">
+                                <h5>Contact Us</h5>
+                                <h2>Let’s start talk 
+                                    about your project</h2>
+                            </div>
+                            <ul class="features_list contact-list mb-40">
+                                <li><i class="fal fa-map-marker-alt"></i><span>25 Main street, New york</span></li>
+                                <li><i class="fal fa-phone"></i>+880 (123) 456 88</li>
+                                <li><i class="fal fa-envelope-open"></i>support@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                <div class="col-xxl-6 offset-xxl-2 col-lg-6">
+                    <div class="contact-form">
+                        <div class="form">
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <input class="contact__input" type="text" placeholder="Full Your Name">
+                                </div>
+                                <div class="col-xl-6">
+                                    <input class="contact__input" type="email" placeholder="Email Address">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <input class="contact__input" type="text" placeholder="Phone Number">
+                                </div>
+                                <div class="col-xl-6">
+                                    <input class="contact__input" type="text" placeholder="Subject">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <textarea class="contact__input contact__input-messege" name="message" placeholder="Write Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="subs-btn">
+                                        <a class="theme_btn theme_btn_bg" href="#">send message <i class="fas fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <!-- contact-area-end -->
+
+
+        <!-- subscribe-area-start -->
+        <section class="subscribe-area grey-bg pt-95 pb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-6 offset-xxl-3 col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 wow fadeInUp2  animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp2;">
+                        <div class="section-title black-title text-center">
+                            <h5>Newsletter Subscriptions</h5>
+                            <h2>Get more update to<br>
+                                join with us</h2>
+                            <div class="foter-subscribe mt-60">
+                                <form class="subscribe-form" action="form.php">
+                                    <input type="text" placeholder="Email Your Address">
+                                    <div class="subs-btn">
+                                        <a class="theme_btn theme_btn_bg" href="about.html">subscribe now <i class="fas fa-chevron-right"></i></a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- subscribe-area-end -->
+        
+    </main>
+    {% endblock main %}

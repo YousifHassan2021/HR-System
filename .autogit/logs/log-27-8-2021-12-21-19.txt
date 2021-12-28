@@ -1,0 +1,26 @@
+-------------------- Auto-Git Log --------------------
+		Mon Sep 27 2021 12:21:19 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* db.sqlite3
+* hr/urls.py
+* hr/views.py
+* missed.md
+
+
+Created files:
+* hr/templates/includes/promotion_create.html
+* hr/templates/includes/promotion_delete.html
+* hr/templates/includes/promotion_list.html
+* hr/templates/includes/promotion_update.html
+* hr/templates/includes/training_create.html
+* hr/templates/includes/training_delete.html
+* hr/templates/includes/training_list.html
+* hr/templates/includes/training_update.html
+
+
+Deleted files:
+
+
+Renamed files:

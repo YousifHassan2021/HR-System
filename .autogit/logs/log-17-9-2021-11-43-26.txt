@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Sun Oct 17 2021 11:43:26 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* website/templates/website_base.html
+* website/urls.py
+* website/views.py
+
+
+Created files:
+* .autogit/logs/log-14-9-2021-16-52-43.txt
+* Workflow.md
+* website/templates/website/new_company.html
+
+
+Deleted files:
+
+
+Renamed files:

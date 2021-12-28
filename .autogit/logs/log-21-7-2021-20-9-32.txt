@@ -1,0 +1,22 @@
+-------------------- Auto-Git Log --------------------
+		Sat Aug 21 2021 20:09:32 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/models.py
+* hr/templates/hr/employee-reports.html
+* hr/urls.py
+* hr/views.py
+
+
+Created files:
+* .autogit/logs/log-21-7-2021-19-39-22.txt
+* accounts/migrations/0003_userjob_experience_years.py
+* accounts/migrations/0004_auto_20210821_1759.py
+* accounts/migrations/0005_auto_20210821_1801.py
+
+
+Deleted files:
+
+
+Renamed files:

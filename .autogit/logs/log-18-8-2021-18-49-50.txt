@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Sat Sep 18 2021 18:49:50 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* settings/forms.py
+* settings/views.py
+* templates/settings_base.html
+
+
+Created files:
+* settings.md
+* settings/templates/settings/asset_condition.html
+* settings/templates/settings/urls.py
+
+
+Deleted files:
+
+
+Renamed files:

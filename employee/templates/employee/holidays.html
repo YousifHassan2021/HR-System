@@ -1,0 +1,57 @@
+
+{% extends 'base.html' %}
+{% load i18n %}
+{% block body %}			<!-- Page Wrapper -->
+            <div class="page-wrapper">
+			
+				<!-- Page Content -->
+                <div class="content container-fluid">
+				
+					<!-- Page Header -->
+					<div class="page-header">
+						<div class="row align-items-center">
+							<div class="col">
+								<h3 class="page-title">{% trans 'Holidays' %} {{today_year}}</h3>
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item"><a href="">{% trans 'Dashboard' %}</a></li>
+									<li class="breadcrumb-item active">{% trans 'Holidays' %}</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- /Page Header -->
+					
+					<div class="row">
+						<div class="col-md-12">
+							<div class="table-responsive">
+								<table class="table table-striped custom-table mb-0">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>{% trans 'Title' %} </th>
+											<th>{% trans 'Holiday Start Date' %}</th>
+											<th>{% trans 'Holiday End Date' %}</th>
+										</tr>
+									</thead>
+									<tbody>
+
+										
+										{% for day in holidays %}	
+											<tr class="holiday-completed">
+												<td>{{forloop.counter}}</td>
+												<td>{{day.name}}</td>
+												<td>{{day.date_from}}</td>
+												<td>{{day.date_to}}</td>
+											</tr>
+										{% endfor %}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+                </div>
+				<!-- /Page Content -->
+				
+            </div>
+			<!-- /Page Wrapper -->
+			{% endblock body %}

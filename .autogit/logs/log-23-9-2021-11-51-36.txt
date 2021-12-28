@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Sat Oct 23 2021 11:51:36 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/forms.py
+* hr/urls.py
+* hr/views.py
+* settings/models.py
+* templates/base.html
+
+
+Created files:
+* .autogit/logs/log-20-9-2021-13-7-19.txt
+
+
+Deleted files:
+
+
+Renamed files:

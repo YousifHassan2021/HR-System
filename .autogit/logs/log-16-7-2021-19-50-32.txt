@@ -1,0 +1,21 @@
+-------------------- Auto-Git Log --------------------
+		Mon Aug 16 2021 19:50:32 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/admin.py
+* accounts/models.py
+* hr/urls.py
+* hr/views.py
+
+
+Created files:
+* accounts/migrations/0006_userattendance.py
+* hr/templates/hr/employee_attendance.html
+* hr/templates/hr/employess_attendance.html
+
+
+Deleted files:
+
+
+Renamed files:

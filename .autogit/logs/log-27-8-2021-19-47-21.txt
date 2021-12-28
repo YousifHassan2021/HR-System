@@ -1,0 +1,24 @@
+-------------------- Auto-Git Log --------------------
+		Mon Sep 27 2021 19:47:21 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/templates/accounts/projects.html
+* accounts/views.py
+* db.sqlite3
+* managers/urls.py
+* managers/views.py
+
+
+Created files:
+* managers/static/manager/js/handel_projects_ajax.js
+* managers/templates/includes/project_create.html
+* managers/templates/includes/project_delete.html
+* managers/templates/includes/project_list.html
+* managers/templates/includes/project_update.html
+
+
+Deleted files:
+
+
+Renamed files:

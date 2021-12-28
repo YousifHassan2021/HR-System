@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load bootstrap4 %}
+{% block body %}	
+			<!-- Page Wrapper -->
+            <div class="page-wrapper">
+			
+				<!-- Page Content -->
+                <div class="content container-fluid">
+					
+					<!-- Page Header -->
+					<div class="page-header">
+						<div class="row">
+							<div class="col-sm-12">
+								<h3 class="page-title">Project Reports</h3>
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+									<li class="breadcrumb-item active">Project Reports</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- /Page Header -->
+					
+					<!-- Content Starts -->
+						<!-- Search Filter -->
+					<div class="row filter-row">
+						
+						<div class="col-sm-6 col-md-3">  
+							<div class="form-group form-focus">
+								<div class="cal-icon">
+									<select class="form-control floating select">
+										<option>
+											Name1
+										</option>
+										<option>
+											Name2
+										</option>
+									</select>
+								</div>
+								<label class="focus-label">Project Name</label>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3">  
+							<div class="form-group form-focus">
+								<div class="cal-icon">
+									<select class="form-control floating select">
+										<option>
+											Active
+										</option>
+										<option>
+											Pending
+										</option>
+									</select>
+								</div>
+								<label class="focus-label">Status</label>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3">  
+							<a href="#" class="btn btn-success btn-block"> Search </a>  
+						</div>     
+                    </div>
+					<!-- /Search Filter -->
+					
+					<div class="row">
+						<div class="col-md-12">
+							<div class="table-responsive">
+								<table class="table table-striped custom-table mb-0 datatable">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Project Title</th>
+											<th>Client Name</th>
+											<th>Start Date</th>
+											<th>End Date</th>
+											<th>Status</th>
+											<th>Team</th>
+										</tr>
+									</thead>
+									<tbody>
+										
+										{% for project in projects %}	
+											<tr>
+												<td>1</td>
+												<td>
+													<a href="{% url 'managers:project_detail' project.id %}">{{project}}</a>
+												</td>
+												<td>
+													<h2 class="table-avatar">
+														<a href="client-profile.html">{{project.client}}</a>
+													</h2>
+												</td>
+												<td>{{project.start_date}}</td>
+												<td>{{project.end_date}}</td>
+												<td>
+													<div class="dropdown action-label">
+														<a href="#" class="btn btn-white btn-sm btn-rounded"><i class="fa fa-dot-circle-o text-success"></i> {{project.status}} </a>
+														
+													</div>
+												</td>
+												<td>
+													<ul class="team-members">
+														{% for employee  in project.team.all %}
+															<li>
+																<a href="#" title="" data-toggle="tooltip" data-original-title="{{employee.username}}"><img alt="" src="{{employee.user_profile.image.url}}"></a>
+															</li>
+														{% endfor %}
+
+
+														<li>
+															<a href="#" class="all-users">+15</a>
+														</li>
+													</ul>
+												</td>
+											</tr>
+										{% endfor %}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+                
+					<!-- /Content End -->
+					
+                </div>
+				<!-- /Page Content -->
+				
+            </div>
+			<!-- /Page Wrapper -->
+
+			{% endblock body %}

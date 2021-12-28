@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Fri Aug 27 2021 17:08:07 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* hr/views.py
+* missed.md
+* project/settings.py
+* templates/base.html
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

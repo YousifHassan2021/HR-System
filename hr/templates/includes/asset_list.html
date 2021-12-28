@@ -1,0 +1,25 @@
+{% load i18n %}
+{% for asset in object_list %}
+<tr>
+    <td>{{asset.user.username}}</td>
+    <td>
+        <strong>{{asset.asset.name}}</strong>
+    </td>
+    <td>{{asset.asset.asset_id}}</td>
+    <td>{{asset.asset.purchase_date}}</td>
+    <td>{{asset.asset.warranty}}</td>
+    <td>{{asset.asset.warranty_end}}</td>
+    <td>${{asset.asset.amount}}</td>
+    <td> {{asset.status}}</td>
+
+    <td class="text-right">
+        <div class="dropdown dropdown-action">
+            <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+            <div class="dropdown-menu dropdown-menu-right">                
+                <button class="dropdown-item btn btn-info btn-sm-x  js-update" data-url="{% url 'hr:asset_edit' asset.id %}"><i class="fa fa-pencil m-r-5"></i>{% trans 'Edit' %}  </button>
+                <button class="dropdown-item btn btn-danger btn-sm-x js-delete" data-url="{% url 'hr:asset_delete' asset.id %}"><i class="fa fa-trash-o m-r-5"></i>{% trans 'Delete' %}  </button>
+            </div>
+        </div>
+    </td>
+</tr>
+{% endfor %}

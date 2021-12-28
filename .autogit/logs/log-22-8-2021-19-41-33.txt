@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Wed Sep 22 2021 19:41:33 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* hr/templates/hr/departments.html
+* hr/views.py
+
+
+Created files:
+* hr/static/hr/handel_ajax.js
+* hr/templates/includes/departments_list.html
+* hr/templates/includes/departments_update.html
+* utils/ajax_form_save.py
+
+
+Deleted files:
+
+
+Renamed files:

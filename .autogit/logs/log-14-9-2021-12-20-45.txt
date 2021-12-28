@@ -1,0 +1,29 @@
+-------------------- Auto-Git Log --------------------
+		Thu Oct 14 2021 12:20:45 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/urls.py
+* accounts/views.py
+* db.sqlite3
+* employee/templates/employee/attendance-employee.html
+* employee/templates/employee/resignation.html
+* employee/templates/employee/salary-view.html
+* employee/urls.py
+* employee/views.py
+* hr/urls.py
+* hr/views.py
+* missed.md
+* templates/base.html
+
+
+Created files:
+* .autogit/logs/log-14-9-2021-11-50-35.txt
+* employee/templates/employee/loan.html
+
+
+Deleted files:
+* hr/templates/hr/employee-detail.html
+
+
+Renamed files:

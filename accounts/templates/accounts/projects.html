@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% load bootstrap4 %}
+{% block body %}	
+			<!-- Page Wrapper -->
+            <div class="page-wrapper">
+			
+				<!-- Page Content -->
+                <div class="content container-fluid">
+				
+					<!-- Page Header -->
+					<div class="page-header">
+						<div class="row align-items-center">
+							<div class="col">
+								<h3 class="page-title">{% trans 'Projects' %}</h3>
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item"><a href="">{% trans 'Dashboard' %}</a></li>
+									<li class="breadcrumb-item active">{% trans 'Projects' %}</li>
+								</ul>
+							</div>
+							
+							{% if request.user.is_manager %}																
+								<div class="col-auto float-right ml-auto">
+									<button class="btn add-btn js-create" data-url="{% url 'manager:project_create' %}"><i class="fa fa-plus"></i> {% trans 'Add New' %}</button>
+								</div>
+							{% endif %}
+
+						</div>
+					</div>
+					<!-- /Page Header -->
+					
+					<!-- Search Filter -->
+					<div class="row filter-row">
+						<div class="col-sm-6 col-md-3">  
+							<div class="form-group form-focus">
+								<input type="text" class="form-control floating">
+								<label class="focus-label">{% trans 'Project Name' %}</label>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3">  
+							<div class="form-group form-focus">
+								<input type="text" class="form-control floating">
+								<label class="focus-label">{% trans 'Employee Name' %}</label>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3"> 
+							<div class="form-group form-focus select-focus">
+								<select class="select floating"> 
+									<option>Select Roll</option>
+									<option>Web Developer</option>
+									<option>Web Designer</option>
+									<option>Android Developer</option>
+									<option>Ios Developer</option>
+								</select>
+								<label class="focus-label">Designation</label>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3">  
+							<a href="#" class="btn btn-success btn-block">{% trans 'Search' %}  </a>  
+						</div>     
+                    </div>
+					<!-- Search Filter -->
+					
+					<div class="row" id="projects-table">
+						{% include "includes/project_list.html" %}
+					</div>
+                </div>
+				<!-- /Page Content -->
+				
+            </div>
+			<!-- /Page Wrapper -->
+							<!-- Create Project Modal -->
+							<div id="create_project" class="modal custom-modal fade" role="dialog">
+								<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+									<div class="modal-content">
+
+									</div>
+								</div>
+							</div>
+							<!-- /Create Project Modal -->
+							
+
+
+							
+{% endblock body %}
+
+
+{% block javascript %}
+<script src="{% static 'manager/js/handel_projects_ajax.js' %}"></script>		  
+{% endblock javascript %}

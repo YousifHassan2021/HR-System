@@ -1,0 +1,24 @@
+-------------------- Auto-Git Log --------------------
+		Mon Jul 26 2021 22:05:23 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* Analysis.md
+* accounts/admin.py
+* accounts/models.py
+* project/settings.py
+* settings/admin.py
+* settings/models.py
+
+
+Created files:
+* .autogit/logs/log-26-6-2021-21-35-13.txt
+* accounts/migrations/0001_initial.py
+* managers/migrations/0001_initial.py
+* settings/migrations/0001_initial.py
+
+
+Deleted files:
+
+
+Renamed files:

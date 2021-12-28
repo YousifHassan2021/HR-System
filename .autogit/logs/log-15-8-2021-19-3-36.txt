@@ -1,0 +1,30 @@
+-------------------- Auto-Git Log --------------------
+		Wed Sep 15 2021 19:03:36 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/urls.py
+* accounts/views.py
+* employee/urls.py
+* employee/views.py
+* hr/urls.py
+* hr/views.py
+* managers/urls.py
+* managers/views.py
+* missed.md
+* templates/base.html
+
+
+Created files:
+* accounts/templates/accounts/employee_attendance.html
+* accounts/templates/accounts/employees.html
+* accounts/templates/accounts/project-view.html
+* accounts/templates/accounts/projects.html
+* media/projects/14bbc99c3907c39d21ec10163ec14e92.png
+* utils/auth_decorators.py
+
+
+Deleted files:
+
+
+Renamed files:

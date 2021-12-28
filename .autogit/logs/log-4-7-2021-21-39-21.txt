@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Wed Aug 04 2021 21:39:21 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* employee/views.py
+* hr/views.py
+* managers/views.py
+
+
+Created files:
+* .autogit/logs/log-2-7-2021-22-14-26.txt
+* missed.md
+
+
+Deleted files:
+
+
+Renamed files:

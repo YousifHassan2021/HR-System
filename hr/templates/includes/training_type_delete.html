@@ -1,0 +1,20 @@
+{% load i18n %}
+<div class="modal-body">
+    <div class="form-header">
+        <h3>{% trans 'Delete Training' %}</h3>
+        <p>{% trans 'Are you sure want to delete?' %}</p>
+    </div>
+    <div class="modal-btn delete-action">
+        <form method="POST" class="training_type_delete_from" action="{% url 'hr:training_type_delete' training.id %}">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-6">
+                    <button type="submit" class="btn btn-primary continue-btn">{% trans 'Delete' %}</button>
+                </div>
+                <div class="col-6">
+                    <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">{% trans 'Cancel' %}</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

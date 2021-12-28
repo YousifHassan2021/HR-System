@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% load bootstrap4 %}
+{% block body %}
+
+
+<!-- Page Wrapper -->
+<div class="page-wrapper">
+
+	<!-- Page Content -->
+	<div class="content container-fluid">
+
+		<!-- Page Header -->
+		<div class="page-header">
+			<div class="row align-items-center">
+				<div class="col">
+					<h3 class="page-title">{% trans 'Employee' %}</h3>
+					<ul class="breadcrumb">
+						<li class="breadcrumb-item"><a href="">{% trans 'Dashboard' %}</a></li>
+						<li class="breadcrumb-item active">{% trans 'Employees' %}</li>
+					</ul>
+				</div>
+				<div class="col-auto float-right ml-auto">
+					
+
+					<a href="{% url 'accounts:employee_export_excel' %}" class="btn add-btn"><i class="fa fa-plus"></i> {% trans 'Export Excel' %}</a>
+
+					{% if request.user.is_hr %}												
+						<button class="btn add-btn js-create" data-url="{% url 'hr:employee_create' %}"><i class="fa fa-plus"></i> {% trans 'Add New' %}</button>
+					{% endif %}
+
+				</div>
+			</div>
+		</div>
+		<!-- /Page Header -->
+
+
+		<div class="row staff-grid-row" id="employee-table">
+			{% include "includes/employee/employee_list.html" %}
+		</div>
+	</div>
+	<!-- /Page Content -->
+
+	<!-- Add Employee Modal -->
+	<div id="add_employee" class="modal custom-modal fade" role="dialog">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+
+			</div>
+		</div>
+	</div>
+	<!-- /Add Employee Modal -->
+
+
+
+
+</div>
+<!-- /Page Wrapper -->
+{% endblock body %}
+{% block javascript %}
+<script src="{% static 'accounts/js/employee_ajax_form.js' %}"></script>		  
+{% endblock javascript %}

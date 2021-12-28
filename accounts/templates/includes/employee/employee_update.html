@@ -1,0 +1,95 @@
+{% load i18n %}
+{% load bootstrap4 %}
+<div class="modal-header">
+    <h5 class="modal-title">{% trans 'Edit Employee' %}</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <form method="POST" enctype="multipart/form-data" class="form employee_save_from" action="{% url 'hr:employee_edit' userform.instance.pk %}">
+        {% csrf_token %}
+
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field userform.username  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field userprofileform.ar_name  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field userprofileform.en_name  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field userprofileform.job_number  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field userprofileform.social_status  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field userprofileform.id_number  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field userprofileform.id_create_date  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field userprofileform.id_end_date  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field userprofileform.id_issue_location  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field userprofileform.gender  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field userprofileform.visa_number  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field userprofileform.birth_date  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field userprofileform.birth_location  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field userprofileform.passport_number  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field userprofileform.passport_issue_date  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field userprofileform.passport_end_date  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field userprofileform.borders_number  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field userprofileform.job  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field userprofileform.religion  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field userprofileform.nationality  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field userprofileform.id_card_date  %}
+            </div>
+
+
+
+
+        </div>
+        <div class="row">
+            {% buttons %}
+            <button type="submit" class="btn btn-primary">{% trans 'Submit' %}</button>
+            {% endbuttons %}
+        
+            </div>
+
+    </form>
+</div>
+
+
+
+
+

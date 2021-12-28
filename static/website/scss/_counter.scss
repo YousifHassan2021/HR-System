@@ -1,0 +1,94 @@
+/* 09. counter */
+.counters {
+    &__icon {
+        background: $white;
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        text-align: center;
+        @media #{$lg} {
+            margin-right: 10px;
+        }
+        &::before {
+            content: '\f00c';
+			position: absolute;
+            font-family: "Font Awesome 5 pro";
+            font-size: 12px;
+            color: $white;
+			right: 0;
+            top: 0;
+            background: $yellow-2;
+			width: 25px;
+            height: 25px;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+            z-index: 1;
+            @include transition(.4s);
+        }
+        & i {
+            color: $grey-soft7;
+            font-size: 45px;
+            line-height: 100px;
+        }
+    }
+    &__content {
+        & h2 {
+            color: $white;
+            font-size: 45px;
+            line-height: 1;
+            @media #{$lg} {
+                font-size: 30px;
+            }
+        }
+        & p {
+            color: $white;
+        }
+    }
+    &:hover {
+        & .counters__icon {
+            &::before {
+                background: $theme-color
+            }
+        }
+    }
+}
+
+
+// couner home-06
+.counter-area-06{
+    @media #{$xs}{
+        padding-top: 80px;
+        padding-bottom: 45px;
+    }
+    & .counters__content {
+        & h2 {
+            color: $heding;
+            margin-bottom: 5px;
+        }
+        & p {
+            color: $theme-color;
+            font-weight: 500;
+            font-size: 15px;
+        }
+    }
+}
+
+
+
+.green-counter {
+    & .counter-img {
+        float: left;
+        margin-right: 30px;
+        & img {
+            color: $theme-color4;
+        }
+    }
+    & .counters__content {
+        & p {
+            color: $theme-color4;
+        }
+    }
+}

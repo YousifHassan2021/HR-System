@@ -1,0 +1,319 @@
+{% extends 'website_base.html' %}
+{% block main %}
+  
+
+    <main>
+        <!--hero-area start-->
+        <div class="hero-area hero-area-03 pos-rel black-bg3">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xxl-5 col-xl-6 col-lg-6">
+                        <div class="hero__content hero__content__03 text-left mb-30">
+                            <h1 class="main-title mb-30 wow fadeInUp2 animated" data-wow-delay=".2s">{{banner.title}}</h1>
+                            <p class="wow fadeInUp2" data-wow-delay=".4s">{{banner.subtitle}}<br> accusantium doloremque laudantium totam</p>
+                            
+                            {% if banner.button_toggle %}
+                                <ul class="btn-list mt-40 wow fadeInUp2 animated" data-wow-delay=".6s">
+                                    <li><a class="theme_btn theme_btn_03 theme_btn_bg" href="{{banner.button_link}}">{{banner.button_text}}<i class="fas fa-chevron-right"></i></a>
+                                    </li>
+                                </ul>
+                            {% endif %}    
+
+                        </div>
+                    </div>
+                    <div class="col-xxl-7 col-xl-6 col-lg-6">
+                        <div class="hero_right_img_03 wow zoomIn animated" data-wow-delay="0.3s">
+                            <img class="max-img" src="{{banner.image.url}}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--hero-area end-->
+        <!--feature-area-02 start-->
+        <section class="feature-area-03 pt-125 pb-65">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+                        <div class="feature_img_03 mb-30">
+                            <img class="img-fluid" src="{{added_value.image.url}}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+                        <div class="feature_wrapper_03 mb-30 pl-100 pr-100">
+                            <div class="section-title blue-title text-left mb-45 wow fadeInUp2 animated" data-wow-delay="0.1s">
+                                <h5 class="wow fadeInUp2 animated" data-wow-delay="0.1s">{{added_value.subtitle}}</h5>
+                                <h2 class="wow fadeInUp2 animated" data-wow-delay="0.1s">{{added_value.title}}</h2>
+                                <p class="mt-30 wow fadeInUp2 animated" data-wow-delay="0.1s">{{added_value.description}}</p>
+                            </div>
+                            <ul class="features_list mb-40 wow fadeInUp2 animated" data-wow-delay="0.1s">
+                                <li>{{added_value.value1}}</li>
+                                <li>{{added_value.value2|default:""}}</li>
+                                <li>{{added_value.value3|default:""}}</li>
+                                
+                                {% if added_value.value4 %}
+                                    <li>{{added_value.value4|default:""}}</li>
+                                {% endif %}
+                                    
+                               
+                            </ul>
+                            
+                            {% if added_value.button_toggle %}
+                                <a href="{{added_value.button_link}}" class="theme_btn theme_btn_03 theme_btn_bg wow fadeInUp2 animated" data-wow-delay="0.1s">{{added_value.button_text}} <i class="fas fa-chevron-right"></i></a>
+                            {% endif %}
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--feature-area-02 end-->
+        <!--services-area start-->
+        <section class="services-area services-area-pb grey-bg pt-125 pb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-6 offset-xxl-3 col-xl-8 offset-xl-2">
+                        <div class="section-title blue-title text-center mb-30">
+                            <h5>{{core_features.title}}</h5>
+                            <h2>{{core_features.subtitle}}</h2>
+                        </div>
+                    </div>
+                </div>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    {% for feature in core_features.features.all %}
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link {% if forloop.first %} active {% endif %}" id="{{feature.id}}-tab" data-bs-toggle="tab" href="#tab-{{feature.id}}" role="tab" aria-controls="{{feature.id}}" aria-selected="true"><i class="flaticon-product"></i> {{feature.main_title}} </a>
+                        </li>
+                    {% endfor %}
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    
+                    {% for  feature in core_features.features.all  %}
+                        <div class="tab-pane fade {% if forloop.first %} show active {% endif %}" id="tab-{{feature.id}}" role="tabpanel" aria-labelledby="{{feature.id}}-tab">
+                            <div class="row align-items-center mt-55">
+                                <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-12">
+                                    <div class="feature_wrapper_02 mb-30">
+                                        <div class="section-title text-left mb-35">
+                                            <h5>{{feature.subtitle}}</h5>
+                                            <h2>{{feature.title}}</h2>
+                                            <p class="mt-30">{{feature.derscription}} </p>
+                                        </div>
+                                        
+                                        {% if feature.button_toggle %}
+                                            <a href="{{feature.button_link}}" class="theme_btn theme_btn_03 theme_btn_bg">{{feature.button_text}}<i class="fas fa-chevron-right"></i></a>
+                                        {% endif %}
+                                            
+                                    </div>
+                                </div>
+                                <div class="col-xxl-8 col-xl-7 col-lg-6 col-md-12">
+                                    <div class="feature_img_02 f-padding text-end mb-30">
+                                        <img class="img-fluid" src="{{feature.image.url}}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                        
+
+
+                  </div>
+            </div>
+        </section>
+        <!--services-area end-->
+        <!--process-area start-->
+        <section class="process-area pt-125 pb-55">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-6 offset-xxl-3 col-xl-8 offset-xl-2">
+                        <div class="section-title blue-title text-center mb-70">
+                            <h5>{{sub_feature.subtitle}}</h5>
+                            <h2>{{sub_feature.title}}</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    {% for feature in sub_feature.sub_features.all %}
+                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
+                            <div class="process_02 text-center mb-30">
+                                <div class="process_02__icon mb-55 wow zoomIn animated" data-wow-delay="0.1">
+                                    <i class="flaticon-booking"></i>
+                                </div>
+                                <h4 class="mb-20">{{feature.title}}</h4>
+                                <p>{{feature.subtitle}}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+
+                </div>
+            </div>
+        </section>
+        <!--process-area end-->
+        <!--benefit-area start-->
+        <section class="benefit-area pos-rel pb-75">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xxl-7 col-xl-6 col-lg-6 col-md-12">
+                        <div class="benefit-img mb-30 wow fadeInLeft animated" data-wow-delay="0.2s">
+                            <img src="{{software_benefit.image.url}}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-12">
+                        <div class="benefit-wrapper mb-30">
+                            <div class="section-title blue-title mb-30 wow fadeInUp2 animated" data-wow-delay="0.1s">
+                                <h5>{{software_benefit.subtitle}}</h5>
+                                <h2 class="mb-40">{{software_benefit.title}}</h2>
+                                <p>{{software_benefit.derscription}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--benefit-area end-->
+        <!--download-area start-->
+        <section class="download-area pos-rel pt-125 pb-130">
+            <div class="download-shape d-none d-sm-inline-block"></div>
+            <img class="shape-two d-none d-sm-inline-block" src="{% static 'website/img/shape/10.png" alt="">
+            <img class="shape-three d-none d-sm-inline-block" src="{% static 'website/img/shape/06.png" alt="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-8 col-xl-8 offset-xxl-2 offset-xl-2 wow fadeInUp2 animated" data-wow-delay="0.1s">
+                        <div class="download_wrapper">
+                            <div class="section-title white-title text-center mb-50">
+                                <h5 class="wow fadeInUp2 animated" data-wow-delay="0.1s">{{midd_banner.subtitle}}</h5>
+                                <h2 class="wow fadeInUp2 animated" data-wow-delay="0.1s">{{midd_banner.title}}</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12">
+                        <div class="dashbord_img-02 pos-rel pt-120 text-center wow fadeInUp2 animated" data-wow-delay="0.3s">
+                            <img class="max-img" src="{{midd_banner.image.url}}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--download-area end-->
+        <!--what-we-do-area start-->
+        <section class="what-do-area-03 pb-100">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xxl-6 col-xl-6 mb-30">
+                        <div class="row gx-3">
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 wow fadeInUp2 animated" data-wow-delay="0.2s">
+                                <div class="do_box do_box_03 mt-30">
+                                    <div class="do_box__icon mb-40">
+                                        <img src="{{analysis.feature1_icon.url}}" alt="">
+                                    </div>
+                                    <h4>{{analysis.feature1_title}}</h4>
+                                    <p>{{analysis.feature1_description}}</p>
+                                    <a href=""><i class="far fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 wow fadeInUp2 animated" data-wow-delay="0.2s">
+                                <div class="do_box do_box_03">
+                                    <div class="do_box__icon icon_02 mb-40">
+                                        <img src="{{analysis.feature2_icon.url}}" alt="">
+                                    </div>
+                                    <h4>{{analysis.feature2_title}}</h4>
+                                    <p>{{analysis.feature2_description}}</p>
+                                    <a href=""><i class="far fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 wow fadeInUp2 animated" data-wow-delay="0.2s">
+                                <div class="do_box do_box_03 mt-30">
+                                    <div class="do_box__icon icon_03 mb-40">
+                                        <img src="{{analysis.feature3_icon.url}}" alt="">
+                                    </div>
+                                    <h4>{{analysis.feature3_title}}</h4>
+                                    <p>{{analysis.feature3_description}}</p>
+                                    <a href=""><i class="far fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 wow fadeInUp2 animated" data-wow-delay="0.2s">
+                                <div class="do_box do_box_03">
+                                    <div class="do_box__icon icon_04 mb-40">
+                                        <img src="{{analysis.feature4_icon.url}}" alt="">
+                                    </div>
+                                    <h4>{{analysis.feature4_title}}</h4>
+                                    <p>{{analysis.feature4_description}}</p>
+                                    <a href=""><i class="far fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-6 col-xl-6 wow fadeInUp2 animated" data-wow-delay="0.1s">
+                        <div class=" we_wrapper_03 we_wrapper_03_pd pl-100 pr-50 mb-30">
+                            <div class="section-title blue-title text-left mb-40">
+                                <h5>{{analysis.subtitle}}</h5>
+                                <h2 class="mb-35">{{analysis.title}}</h2>
+                                <p>{{analysis.derscription}}</p>
+                            </div>
+                            <ul class="features_list features_list_02 mb-45">
+                                <li>{{analysis.value1}}</li>
+                                <li>{{analysis.value2}}</li>
+                                <li>{{analysis.value3}}</li>
+                                
+                                {% if analysis.value4 %}
+                                    <li>{{analysis.value4}}</li>
+                                {% endif %}
+                                    
+                                
+                            </ul>
+                            
+                            {% if analysis.button_toggle %}
+                                <a class="theme_btn theme_btn_03 theme_btn_bg" href="{{analysis.button_link}}">{{analysis.button_text}}<i class="fas fa-chevron-right"></i></a>
+                            {% endif %}
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--what-we-do-area end-->
+        <!--testimonial-area start-->
+        <section class="testimonial-area testimonial-bg-03 pos-rel grey-bg pt-125 pb-215">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-6 offset-xxl-3 wow fadeInUp2" data-wow-delay=".2s">
+                        <div class="section-title white-title text-center pr-20 pl-20 mb-80">
+                            <h5>{{customer_review.subtitle}}</h5>
+                            <h2>{{customer_review.title}}</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gx-0 testimonial-active-03 wow fadeInUp2" data-wow-delay=".4s">
+                    
+                    {% for review in customer_review.reviews.all %}
+                        <div class="col-xxl-4 testimonial-item">
+                            <div class="text_inner text_inner_03 pos-rel clearfix white-bg">
+                                <div class="text_inner__icon">
+                                    <i class="fal fa-quote-right"></i>
+                                </div>
+                                <div class="text_inner__content overflow-hidden">
+                                    <p class="test-title">{{review.review}}</p>
+                                    <div class="testimonial-author d-flex mt-25">
+                                        <div class="testimonial-author__img mr-20">
+                                            <img src="{{review.image.url}}" alt="">
+                                        </div>
+                                        <div class="testimonial-author__content">
+                                            <h4>{{review.name}}</h4>
+                                            <span>{{review.subtitle}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                        
+
+
+                </div>
+            </div>
+        </section>
+        <!--testimonial-area end-->
+        
+    </main>
+
+    {% endblock main %}

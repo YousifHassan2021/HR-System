@@ -1,0 +1,23 @@
+-------------------- Auto-Git Log --------------------
+		Sun Oct 03 2021 11:49:00 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/templates/accounts/employees.html
+* accounts/views.py
+* hr/urls.py
+* hr/views.py
+
+
+Created files:
+* accounts/static/accounts/js/employee_ajax_form.js
+* accounts/templates/includes/employee/employee_create.html
+* accounts/templates/includes/employee/employee_delete.html
+* accounts/templates/includes/employee/employee_list.html
+* accounts/templates/includes/employee/employee_update.html
+
+
+Deleted files:
+
+
+Renamed files:

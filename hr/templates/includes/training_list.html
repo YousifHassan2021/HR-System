@@ -1,0 +1,58 @@
+{% load i18n %}
+{% for training in object_list %}	
+<tr>
+    <td>{{forloop.counter}}</td>
+    <td>{{training}}</td>
+    <td>
+        <h2 class="table-avatar">
+            <a href="profile.html" class="avatar"><img alt="" src="{{training.course_reainer.user_profile.image.url}}"></a>
+            <a href="profile.html">{{training.trainer}}</a>
+        </h2>
+    </td>
+    <td>
+        <ul class="team-members">
+            
+            {% for employee in training.employees.all %}
+                <li>
+                    <a href="#" title="Bernardo Galaviz" data-toggle="tooltip"><img alt="" src="{{employee.training_employee.user_profile.image.url}}"></a>
+                </li>
+            {% endfor %}
+                
+
+            <li class="dropdown avatar-dropdown">
+                <a href="#" class="all-users dropdown-toggle" data-toggle="dropdown" aria-expanded="false">+15</a>
+            </li> 
+        </ul>
+    </td>
+    <td>{{training.start_date|date:"d M Y"}} - {{training.end_date|date:"d M Y"}}</td>  
+    <td>{{training.notes}}</td>
+    <td>{{training.cost}}</td>
+    <td>
+        <div class="dropdown action-label">
+            <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                
+                {% if training.status == "ACTIVE" %}
+                    <i class="fa fa-dot-circle-o text-success"></i> Active
+                {% else %}
+                    <i class="fa fa-dot-circle-o text-danger"></i> Inactive
+                {% endif %}
+                    
+                
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Active</a>
+                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactive</a>
+            </div>
+        </div>
+    </td>
+    <td class="text-right">
+        <div class="dropdown dropdown-action">
+            <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <button class="btn btn-info btn-sm-x  js-update" data-url="{% url 'hr:training_edit' training.id %}"><i class="fa fa-pencil m-r-5"></i> {% trans 'Edit' %} </button>
+                <button class="btn btn-danger btn-sm-x js-delete" data-url="{% url 'hr:training_delete' training.id %}"><i class="fa fa-trash-o m-r-5"></i> {% trans 'Delete' %} </button>
+            </div>
+        </div>
+    </td>
+</tr>				
+{% endfor %}

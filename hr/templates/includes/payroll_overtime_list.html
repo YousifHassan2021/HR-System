@@ -1,0 +1,24 @@
+{% load i18n %}
+
+{% for item in object_list %}	
+<tr>
+    <td>{{forloop.counter}}</td>
+    <td>{{item.user}}</td>
+    <td>{{item.overhours}}</td>
+    <td>{{item.hour_equal}}</td>
+    <td>{{item.total_over_time_hours}}</td>
+    <td>{{item.date}}</td>
+    <td>{{item.description}}</td>
+    <td>{{item.status}}</td>
+    <td class="text-right">
+        <div class="dropdown dropdown-action">
+            <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <button class="btn btn-info btn-sm-x  js-update" data-url="{% url 'hr:payroll_overtime_edit' item.id %}"><i class="fa fa-pencil m-r-5"></i> {% trans 'Edit' %} </button>
+                <button class="btn btn-danger btn-sm-x js-delete" data-url="{% url 'hr:payroll_overtime_delete' item.id %}"><i class="fa fa-trash-o m-r-5"></i> {% trans 'Delete' %} </button>
+            </div>
+        </div>
+    </td>
+</tr>
+{% endfor %}
+

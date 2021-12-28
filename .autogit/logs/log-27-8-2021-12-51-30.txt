@@ -1,0 +1,30 @@
+-------------------- Auto-Git Log --------------------
+		Mon Sep 27 2021 12:51:30 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* db.sqlite3
+* hr/templates/hr/promotion.html
+* hr/templates/hr/training.html
+* hr/templates/includes/promotion_create.html
+* hr/templates/includes/promotion_delete.html
+* hr/templates/includes/promotion_list.html
+* hr/templates/includes/promotion_update.html
+* hr/templates/includes/training_create.html
+* hr/templates/includes/training_delete.html
+* hr/templates/includes/training_list.html
+* hr/templates/includes/training_update.html
+* hr/urls.py
+* hr/views.py
+
+
+Created files:
+* .autogit/logs/log-27-8-2021-12-21-19.txt
+* hr/static/hr/handel_promotion_ajax.js
+* hr/static/hr/handel_training_ajax.js
+
+
+Deleted files:
+
+
+Renamed files:

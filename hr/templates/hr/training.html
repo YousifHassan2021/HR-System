@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% load bootstrap4 %}
+{% block body %}
+
+			<!-- Page Wrapper -->
+            <div class="page-wrapper">
+			
+				<!-- Page Content -->
+                <div class="content container-fluid">
+				
+					<!-- Page Header -->
+					<div class="page-header">
+						<div class="row align-items-center">
+							<div class="col">
+								<h3 class="page-title">{% trans 'Training' %}</h3>
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item"><a href="">{% trans 'Dashboardr' %}</a></li>
+									<li class="breadcrumb-item active">{% trans 'Training' %}</li>
+								</ul>
+							</div>
+							<div class="col-auto float-right ml-auto">
+								<button class="btn add-btn js-create" data-url="{% url 'hr:training_create' %}"><i class="fa fa-plus"></i>{% trans 'Add New' %} </button>
+							</div>
+						</div>
+					</div>
+					<!-- /Page Header -->
+					
+					<div class="row">
+						<div class="col-md-12">
+							<div class="table-responsive">
+								<table class="table table-striped custom-table mb-0 datatable" id="training-table">
+									<thead>
+										<tr>
+											<th style="width: 30px;">#</th>
+											<th>{% trans 'Training Type' %}</th>
+											<th>{% trans 'Trainer' %}</th>
+											<th>{% trans 'Employee' %}</th>
+											<th>{% trans 'Time Duration' %}</th>
+											<th>{% trans 'Description' %} </th>
+											<th>{% trans 'Cost' %} </th>
+											<th>{% trans 'Status' %} </th>
+											<th class="text-right">{% trans 'Action' %}</th>
+										</tr>
+									</thead>
+									<tbody>										
+										{% include "includes/training_list.html" %}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+                </div>
+				<!-- /Page Content -->
+
+				<!-- Add Training List Modal -->
+				<div id="add_training" class="modal custom-modal fade" role="dialog">
+					<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+						<div class="modal-content">
+
+						</div>
+					</div>
+				</div>
+				<!-- /Add Training List Modal -->
+				
+				
+
+			
+            </div>
+			<!-- /Page Wrapper -->
+			{% endblock body %}
+
+
+			{% block javascript %}
+	<script src="{% static 'hr/handel_training_ajax.js' %}"></script>		  
+	{% endblock javascript %}

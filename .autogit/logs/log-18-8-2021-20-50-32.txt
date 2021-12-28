@@ -1,0 +1,37 @@
+-------------------- Auto-Git Log --------------------
+		Sat Sep 18 2021 20:50:32 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* settings/templates/settings/asset_status.html
+* settings/templates/settings/attendance_types.html
+* settings/templates/settings/bank_names.html
+* settings/templates/settings/branch.html
+* settings/templates/settings/city.html
+* settings/templates/settings/discount_types.html
+* settings/templates/settings/employee_status.html
+* settings/templates/settings/insurance_class.html
+* settings/templates/settings/insurance_company.html
+* settings/templates/settings/job_grade.html
+* settings/templates/settings/project_periority.html
+* settings/templates/settings/project_status.html
+* settings/templates/settings/qualifications.html
+* settings/templates/settings/reason_to_terminate.html
+* settings/templates/settings/replacement_period.html
+* settings/templates/settings/replacement_type.html
+* settings/templates/settings/salary_pay_types.html
+* settings/templates/settings/salary_type.html
+* settings/templates/settings/ticket_type.html
+* settings/urls.py
+* settings/views.py
+
+
+Created files:
+* .autogit/logs/log-18-8-2021-20-20-22.txt
+* settings/templates/settings/follower_type.html
+
+
+Deleted files:
+
+
+Renamed files:

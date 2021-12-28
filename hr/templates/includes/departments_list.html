@@ -1,0 +1,11 @@
+{% load i18n %}
+{% for deparment in object_list %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{deparment}}</td>
+        <td class="text-right">
+            <button class="btn btn-info btn-sm-x  js-update" data-url="{% url 'hr:department_edit' deparment.id %}"><i class="fa fa-pencil m-r-5"></i> {% trans 'Edit' %} </button>
+            <button class="btn btn-danger btn-sm-x js-update" data-url="{% url 'hr:department_delete' deparment.id %}"><i class="fa fa-trash-o m-r-5"></i> {% trans 'Delete' %} </button>
+        </td>
+    </tr>
+{% endfor %}

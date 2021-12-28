@@ -1,0 +1,30 @@
+-------------------- Auto-Git Log --------------------
+		Sat Aug 28 2021 21:48:13 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* employee/urls.py
+* employee/views.py
+* utils/user_info_context_processor.py
+
+
+Created files:
+* .autogit/logs/log-28-7-2021-21-18-3.txt
+* employee/templates/employee/assets.html
+* employee/templates/employee/attendance-employee.html
+* employee/templates/employee/dashboard.html
+* employee/templates/employee/holidays.html
+* employee/templates/employee/performance.html
+* employee/templates/employee/projects.html
+* employee/templates/employee/promotion.html
+* employee/templates/employee/salary-view.html
+* employee/templates/employee/task-board.html
+* employee/templates/employee/training.html
+* templates/employee_base.html
+
+
+Deleted files:
+
+
+Renamed files:
+* [object Object]

@@ -1,0 +1,27 @@
+-------------------- Auto-Git Log --------------------
+		Sat Oct 23 2021 12:21:46 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/models.py
+* db.sqlite3
+* hr/templates/hr/payroll-items.html
+* hr/urls.py
+* hr/views.py
+* templates/base.html
+
+
+Created files:
+* .autogit/logs/log-23-9-2021-11-51-36.txt
+* accounts/migrations/0005_auto_20211023_1017.py
+* hr/static/hr/handel_payroll_addition.js
+* hr/templates/includes/payroll_addition_create.html
+* hr/templates/includes/payroll_addition_delete.html
+* hr/templates/includes/payroll_addition_list.html
+* hr/templates/includes/payroll_addition_update.html
+
+
+Deleted files:
+
+
+Renamed files:

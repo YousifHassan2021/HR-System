@@ -1,0 +1,173 @@
+/* 15. contact */
+.cta-area {
+    padding: 245px 0 235px 0;
+    @media #{$xl} {
+        padding: 150px 0 109px 0;
+    }
+    @media #{$lg} {
+        padding: 100px 0 109px 0;
+    }
+    @media #{$md} {
+        padding: 100px 0 109px 0;
+    }
+    @media #{$xs} {
+        padding: 100px 0 109px 0;
+    }
+    &.cta-padding {
+        padding: 110px 0 130px 0;
+        @media #{$lg}{
+            padding: 125px 0 90px 0;
+        }
+        @media #{$md}{
+            padding: 125px 0 120px 0;
+        }
+        @media #{$xs}{
+            padding: 75px 0 70px 0;
+        }
+    }
+   & .cta-shape {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        &::before {
+            position: absolute;
+            content: '';
+            width: 10px;
+            height: 10px;
+            border: 2px solid $white;
+            border-radius: 50%;
+            left: 170px;
+            top: -75px;
+            animation: animationFramesTwo 15s infinite linear;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            width: 10px;
+            height: 10px;
+            border: 2px solid $yellow-4;
+            border-radius: 50%;
+            right: 25%;
+            text-align: center;
+            top: -150px;
+            margin: 0 auto;
+            animation: animationFramesTwo 10s infinite linear;
+        }
+    }
+    & .shape-two {
+        position: absolute;
+        left: 650px;
+        bottom: 130px;
+        animation: rotation 5s infinite linear;
+        z-index: 1;
+        @media #{$xs} {
+            left: 250px;
+        }
+    }
+   & .shape-three {
+        position: absolute;
+        right: 165px;
+        bottom: 205px;
+        z-index: 2;
+        animation: animationFramesOne 15s infinite linear;
+    }
+   & .shape-four {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        max-width: 100%;
+    }
+   & .shape-five {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        max-width: 100%;
+    }
+}
+.cta-right-img {
+    position: absolute;
+    right: 100px;
+    top: 65px;
+    min-height: 790px;
+    width: 51%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right top;
+    z-index: 1;
+    @media #{$lp} {
+        width: 68%;
+    }
+    @media #{$xl} {
+        top: 135px;
+        min-height: 500px;
+        width: 50%;
+    }
+    @media #{$lg} {
+        top: 88px;
+        min-height: 404px;
+        width: 49%;
+    }
+    @media #{$md} {
+            position: relative;
+            right: 0;
+            top: 30px;
+            min-height: 450px;
+            width: 78%;
+            left: 0;
+            margin: 0 auto;
+    }
+    @media #{$xs} {
+        position: relative;
+        right: 0;
+        top: 30px;
+        min-height: 250px;
+        width: 100%;
+        left: 0;
+        margin: 0 auto;
+    }
+    @media #{$sm} {
+        position: relative;
+        right: 0;
+        top: 30px;
+        min-height: 400px;
+        width: 88%;
+        left: 0;
+        margin: 0 auto;
+    }
+}
+
+.cta_wrapper {
+    & .cta-lists {
+        & li {
+            font-size: 16px;
+            color: $white;
+            margin-bottom: 15px;
+            & i {
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+// .cta_wrapper-h4 /home-page-04
+.cta_wrapper-h4 {
+    & .section-title {
+        & h2 {
+            font-size: 42px;
+            @media #{$xs}{
+                font-size: 35px;
+            }
+        }
+    }
+}
+
+
+// contact-area
+.contact-area {
+    @media #{$xs}{
+        padding-top: 80px;
+        padding-bottom: 70px;
+    }
+}

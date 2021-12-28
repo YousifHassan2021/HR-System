@@ -1,0 +1,22 @@
+-------------------- Auto-Git Log --------------------
+		Wed Sep 08 2021 20:10:51 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* managers/models.py
+* managers/templates/managers/projects.html
+* managers/urls.py
+* managers/views.py
+
+
+Created files:
+* .autogit/logs/log-8-8-2021-19-40-42.txt
+* managers/forms.py
+* managers/templates/managers/project-reports.html
+* media/projects/36b51193764c76ef572855f90d414ef5.png
+
+
+Deleted files:
+
+
+Renamed files:

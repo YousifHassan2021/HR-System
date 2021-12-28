@@ -1,0 +1,75 @@
+
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% load bootstrap4 %}
+{% block body %}
+			<!-- Page Wrapper -->
+            <div class="page-wrapper">
+			
+				<!-- Page Content -->
+                <div class="content container-fluid">
+				
+					<!-- Page Header -->
+					<div class="page-header">
+						<div class="row align-items-center">
+							<div class="col">
+								<h3 class="page-title">{% trans 'Payroll' %}</h3>
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item"><a href="index.html">{% trans 'Dashboard' %}</a></li>
+									<li class="breadcrumb-item active">{% trans 'Payroll' %}</li>
+									<li class="breadcrumb-item active">{% trans 'Overtime' %}</li>
+								</ul>
+							</div>
+							<div class="col-auto float-right ml-auto">
+								<button class="btn add-btn js-create" data-url="{% url 'hr:payroll_overtime_create' %}"><i class="fa fa-plus"></i> {% trans 'Add Overtime' %}</button>
+							</div>
+						</div>
+					</div>
+					<!-- /Page Header -->
+					
+					<div class="row">
+						<div class="col-md-12">
+							<div class="table-responsive">
+								<table class="table table-striped custom-table mb-0 datatable" id="overtime-table">
+									<thead>
+										<tr>
+											<th style="width: 30px;">#</th>
+											<th>{% trans 'User' %} </th>
+											<th>{% trans 'Overtime Hours' %} </th>
+											<th>{% trans 'hour_equal ' %} </th>
+											<th>{% trans 'total_over_time_hours ' %} </th>
+											<th>{% trans 'date ' %} </th>
+											<th>{% trans 'description ' %} </th>
+											<th>{% trans 'status ' %} </th>
+											<th class="text-right">{% trans 'Action' %}</th>
+										</tr>
+									</thead>
+									<tbody>
+										{% include 'includes/payroll_overtime_list.html' %}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+                </div>
+				<!-- /Page Content -->
+
+				<!-- Edit Designation Modal -->
+				<div id="edit_designation" class="modal custom-modal fade" role="dialog">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+
+						</div>
+					</div>
+				</div>
+				<!-- /Edit Designation Modal -->
+				
+
+			
+            </div>
+	
+{% endblock body %}
+{% block javascript %}
+<script src="{% static 'hr/handel_payroll_overtime.js' %}"></script>		  
+{% endblock javascript %}

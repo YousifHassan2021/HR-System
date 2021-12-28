@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Wed Oct 20 2021 13:07:19 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* hr/views.py
+* missed.md
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

@@ -1,0 +1,21 @@
+-------------------- Auto-Git Log --------------------
+		Sat Oct 02 2021 20:09:31 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* db.sqlite3
+* website/models.py
+* website/templates/website/home.html
+* website/views.py
+
+
+Created files:
+* .autogit/logs/log-2-9-2021-19-39-21.txt
+* media/feature/6f16e3877198684968c7cfc3586e7d30.png
+* website/migrations/0005_feature_subtitle.py
+
+
+Deleted files:
+
+
+Renamed files:

@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block body %}	
+			<!-- Page Wrapper -->
+            <div class="page-wrapper">
+			
+				<!-- Page Content -->
+                <div class="content container-fluid">
+				
+					<!-- Page Header -->
+					<div class="page-header">
+						<div class="row align-items-center">
+							<div class="col">
+								<h3 class="page-title">{% trans 'Promotion' %}</h3>
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item"><a href="">{% trans 'Dashboard' %}</a></li>
+									<li class="breadcrumb-item active">{% trans 'Promotion %}</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- /Page Header -->
+					
+					<div class="row">
+						<div class="col-md-12">
+							<div class="table-responsive">
+							
+								<!-- Promotion Table -->
+								<table class="table table-striped custom-table mb-0 datatable">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>{% trans 'Department' %}</th>
+											<th>{% trans 'Promotion From' %} </th>
+											<th>{% trans 'To Department' %}</th>
+											<th>{% trans 'Promotion To' %} </th>
+											<th> {% trans 'Date' %} </th>
+										</tr>
+									</thead>
+									<tbody>
+										{% for object in my_promotions %}
+											<tr>
+												<td>{{forloop.counter}}</td>
+												<td>{{object.from_type}}</td>
+												<td>{{object.from_grade}}</td>
+												<td>{{object.to_type}}</td>
+												<td>{{object.to_grade}}</td>
+												<td>{{object.date}}</td>
+											</tr>
+										{% endfor %}
+									</tbody>
+								</table>
+								<!-- /Promotion Table -->
+								
+							</div>
+						</div>
+					</div>
+                </div>
+				<!-- /Page Content -->
+
+            </div>
+			<!-- /Page Wrapper -->
+			{% endblock body %}

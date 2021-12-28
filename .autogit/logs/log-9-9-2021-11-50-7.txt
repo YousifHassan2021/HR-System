@@ -1,0 +1,62 @@
+-------------------- Auto-Git Log --------------------
+		Sat Oct 09 2021 11:50:07 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* .gitignore
+* accounts/templates/accounts/employee_attendance.html
+* accounts/templates/accounts/employees.html
+* accounts/templates/accounts/project-view.html
+* accounts/templates/accounts/projects.html
+* accounts/templates/includes/employee/employee_create.html
+* accounts/templates/includes/employee/employee_delete.html
+* accounts/templates/includes/employee/employee_list.html
+* accounts/templates/includes/employee/employee_update.html
+* db.sqlite3
+* employee/templates/employee/all-overtime.html
+* employee/templates/employee/assets.html
+* employee/templates/employee/dashboard.html
+* employee/templates/employee/holidays.html
+* employee/templates/employee/overtime.html
+* employee/templates/employee/project-view.html
+* employee/templates/employee/projects.html
+* employee/templates/employee/promotion.html
+* employee/templates/employee/training.html
+* hr/templates/includes/asset_create.html
+* hr/templates/includes/asset_delete.html
+* hr/templates/includes/asset_list.html
+* hr/templates/includes/asset_update.html
+* hr/templates/includes/department_create.html
+* hr/templates/includes/department_delete.html
+* hr/templates/includes/departments_list.html
+* hr/templates/includes/departments_update.html
+* hr/templates/includes/holiday_create.html
+* hr/templates/includes/holiday_delete.html
+* hr/templates/includes/holiday_list.html
+* hr/templates/includes/holiday_update.html
+* hr/templates/includes/job_create.html
+* hr/templates/includes/job_delete.html
+* hr/templates/includes/jobs_list.html
+* hr/templates/includes/jobs_update.html
+* hr/templates/includes/promotion_create.html
+* hr/templates/includes/promotion_delete.html
+* hr/templates/includes/promotion_list.html
+* hr/templates/includes/promotion_update.html
+* hr/templates/includes/training_create.html
+* hr/templates/includes/training_delete.html
+* hr/templates/includes/training_list.html
+* hr/templates/includes/training_update.html
+* locale/ar/LC_MESSAGES/django.mo
+* locale/ar/LC_MESSAGES/django.po
+* static/css/style-rtl.css
+* templates/base.html
+* templates/settings_base.html
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

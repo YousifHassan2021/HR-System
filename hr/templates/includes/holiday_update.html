@@ -1,0 +1,61 @@
+{% load i18n %}
+{% load bootstrap4 %}
+<div class="modal-header">
+    <h5 class="modal-title">{% trans 'Dashboard' %}Edit Training</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <form method="POST" class="training_save_from" action="{% url 'hr:training_edit' form.instance.pk %}">
+        {% csrf_token %}
+        <div class="row">
+
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field form.course  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field form.trainer  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field form.employees  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field form.cost  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field form.start_date  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field form.end_date  %}
+            </div>
+            <div class="col-lg-6 col-md-12">
+                {% bootstrap_field form.notes  %}
+            </div>
+            <div class="col-lg-12 col-md-12">
+                {% bootstrap_field form.status  %}
+            </div>
+            
+        </div>
+        {% buttons %}
+        <button type="submit" class="btn btn-primary">{% trans 'Dashboard' %}Submit</button>
+        {% endbuttons %}
+    </form>
+</div>
+
+
+<div class="modal-header">
+    <h5 class="modal-title">Add Holiday</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <form method="POST" class="holiday_save_from" action="{% url 'hr:training_edit' form.instance.pk %}">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% buttons %}
+        <button type="submit" class="btn btn-primary">Submit</button>
+        {% endbuttons %}
+    </form>
+</div>

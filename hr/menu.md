@@ -1,0 +1,24 @@
+- hr : : 
+    - dashboard
+    - employee : 
+        - attendance
+        - salary
+        - vacations
+        - performance 
+        - report 
+        - discounts
+        - replacements
+        - terminations
+        - training
+        - assets 
+        - promotion
+        - overtime
+        - jobs
+        
+    - Requests : 
+        - all requests : 
+            - approve
+            - history 
+
+    -  reports : 
+        - 

@@ -1,0 +1,51 @@
+-------------------- Auto-Git Log --------------------
+		Sat Jul 17 2021 21:52:19 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* project/settings.py
+
+
+Created files:
+* Analysis.md
+* accounts/__init__.py
+* accounts/admin.py
+* accounts/apps.py
+* accounts/migrations/__init__.py
+* accounts/models.py
+* accounts/tests.py
+* accounts/views.py
+* employee/__init__.py
+* employee/admin.py
+* employee/apps.py
+* employee/migrations/__init__.py
+* employee/models.py
+* employee/tests.py
+* employee/views.py
+* hr/__init__.py
+* hr/admin.py
+* hr/apps.py
+* hr/migrations/__init__.py
+* hr/models.py
+* hr/tests.py
+* hr/views.py
+* managers/__init__.py
+* managers/admin.py
+* managers/apps.py
+* managers/migrations/__init__.py
+* managers/models.py
+* managers/tests.py
+* managers/views.py
+* settings/__init__.py
+* settings/admin.py
+* settings/apps.py
+* settings/migrations/__init__.py
+* settings/models.py
+* settings/tests.py
+* settings/views.py
+
+
+Deleted files:
+
+
+Renamed files:

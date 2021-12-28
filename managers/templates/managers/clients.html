@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+	{% load bootstrap4 %}
+	{% block body %}
+	
+			<!-- Page Wrapper -->
+            <div class="page-wrapper">
+			
+				<!-- Page Content -->
+                <div class="content container-fluid">
+				
+					<!-- Page Header -->
+					<div class="page-header">
+						<div class="row align-items-center">
+							<div class="col">
+								<h3 class="page-title">{% trans 'Clients' %}</h3>
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item"><a href="">{% trans 'Dashboard' %}</a></li>
+									<li class="breadcrumb-item active">{% trans 'Clients' %}</li>
+								</ul>
+							</div>
+							<div class="col-auto float-right ml-auto">
+								<button class="btn add-btn js-create" data-url="{% url 'manager:client_create' %}"><i class="fa fa-plus"></i>{% trans 'Add New' %} </button>
+							</div>
+						</div>
+					</div>
+					<!-- /Page Header -->
+					
+					<div class="row">
+						<div class="col-md-12">
+							<div class="table-responsive">
+							
+								<!-- Promotion Table -->
+								<table class="table table-striped custom-table mb-0 datatable" id="client-table">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>{% trans 'Name' %} </th>
+											<th>{% trans 'Mobile Number' %}</th>
+											<th>{% trans 'Email' %} </th>
+											<th>{% trans 'Address' %}</th>
+											<th class="text-right">{% trans 'Action' %}</th>
+										</tr>
+									</thead>
+									<tbody>										
+										{% include "includes/client_list.html" %}
+									</tbody>
+								</table>
+								<!-- /Promotion Table -->
+								
+							</div>
+						</div>
+					</div>
+                </div>
+				<!-- /Page Content -->
+				
+				<!-- Add Promotion Modal -->
+				<div id="add_client" class="modal custom-modal fade" role="dialog">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+
+						</div>
+					</div>
+				</div>
+				<!-- /Add Promotion Modal -->
+
+			
+            </div>
+			<!-- /Page Wrapper -->
+			{% endblock body %}
+
+
+			{% block javascript %}
+			<script src="{% static 'manager/js/handel_client_ajax.js' %}"></script>		  
+			{% endblock javascript %}

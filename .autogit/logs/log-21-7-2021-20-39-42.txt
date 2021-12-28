@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Sat Aug 21 2021 20:39:42 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* hr/templates/hr/employee-reports.html
+* project/settings.py
+* templates/base.html
+
+
+Created files:
+* .autogit/logs/log-21-7-2021-20-9-32.txt
+* hr/menu.md
+
+
+Deleted files:
+
+
+Renamed files:

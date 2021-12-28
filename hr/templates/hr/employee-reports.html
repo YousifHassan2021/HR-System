@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load bootstrap4 %}
+{% block body %}
+
+			<!-- Page Wrapper -->
+            <div class="page-wrapper">
+			
+				<!-- Page Content -->
+                <div class="content container-fluid">
+					
+				
+					<!-- Page Header -->
+					<div class="page-header">
+						<div class="row">
+							<div class="col">
+								<h3 class="page-title">{% trans 'Employee Report' %}</h3>
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item"><a href="">{% trans 'Dashboard' %}</a></li>
+									<li class="breadcrumb-item active">{% trans 'Employee Report' %}</li>
+								</ul>
+							</div>
+							<div class="col-auto">
+								<a href="#" class="btn btn-primary"> {% trans 'PDF' %}</a>
+								<a href="#" class="btn btn-primary"> {% trans 'Excel' %}</a>
+							</div>
+						</div>
+					</div>
+					<!-- /Page Header -->
+					
+						<!-- Content Starts -->
+						
+							<!-- Search Filter -->
+					<div class="row filter-row mb-4">
+						<form action="" method="GET">
+							<div class="col-sm-6 col-md-3">  
+								<div class="form-group form-focus">
+									<input class="form-control floating" type="text">
+									<label class="focus-label">{% trans 'Employee' %}</label>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-3"> 
+								<div class="form-group form-focus select-focus">
+									<select class="select floating"> 
+										<option>Select Department</option>
+										<option>Designing</option>
+										<option>Development</option>
+										<option>Finance</option>
+										<option>Hr & Finance</option>
+									</select>
+									<label class="focus-label">Department</label>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-3">  
+								<div class="form-group form-focus">
+									<div class="cal-icon">
+										<input class="form-control floating datetimepicker" type="text">
+									</div>
+									<label class="focus-label">From</label>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-3">  
+								<div class="form-group form-focus">
+									<div class="cal-icon">
+										<input class="form-control floating datetimepicker" type="text">
+									</div>
+									<label class="focus-label">To</label>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-3">  
+								<a href="#" class="btn btn-success btn-block"> Search </a>  
+							</div> 
+					    </form>    
+                    </div>
+					<!-- /Search Filter -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="table-responsive">
+								<table class="table table-striped custom-table mb-0 datatable">
+									<thead>
+										<tr>
+											<th>{% trans 'Employee Name' %}</th>
+											<th>{% trans 'Employee Type' %}</th>
+											<th>{% trans 'Email' %}</th>
+											<th>{% trans 'Department' %}</th>
+											<th>{% trans 'Job' %}</th>
+											<th>{% trans 'Joining Date' %}</th>
+											<th>{% trans 'DOB' %}</th>
+											<th>{% trans 'Martial Status' %}</th>
+											<th>{% trans 'Gender' %}</th>
+											<th>{% trans 'Terminated Date' %}</th>
+											<th>{% trans 'Relieving Date' %}</th>
+											<th>{% trans 'Salary' %}</th>
+											<th>{% trans 'Address' %}</th>
+											<th>{% trans 'Contact Number' %}</th>
+											<th>{% trans 'Emercency Contact Details' %}</th>
+											<th>{% trans 'Experience' %}</th>
+											<th class="text-center">{% trans 'Status' %}</th>
+										</tr>
+									</thead>
+									<tbody>
+										
+										{% for employee in employees %}	
+											<tr>
+												<td>
+													<h2 class="table-avatar">
+														<a href="profile.html" class="avatar">
+															
+															{% if employee.user_profile.image %}
+															<img alt="" src="{{employee.user_profile.image.url}}">
+															{% endif %}																
+														</a>
+														<a href="profile.html" class="text-primary">{{employee.username}} <span>{{employee.user_profile.job_number}}</span></a>
+													</h2>
+												</td>
+												<td>{{employee.user_job.employee_status}}</td>
+												<td class="text-info">{{employee.user_contact.email}}</td>
+												<td>{{employee.user_job.department_section}}</td>
+												<td>{{employee.user_job.job_type}}</td>
+												<td>{{employee.user_profile.join_date}}</td>
+												<td>{{employee.user_profile.birth_date}}</td>
+												<td>{{employee.user_profile.social_status}}</td>
+												<td>{{employee.user_profile.gender}}</td>
+												<td>-</td>
+												<td>-</td>
+												<td>$20000</td>
+												<td>{{employee.user_contact.address}}</td>
+												<td>{{employee.user_contact.mobile_number}}</td>
+												<td>{{employee.user_contact.land_line}}</td>
+												<td>{{employee.user_job.experience_years}}</td>
+												<td><button class="btn btn-outline-success btn-sm">Active</button></td>
+											</tr>
+										{% endfor %}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					
+                
+					<!-- /Content End -->
+					
+                </div>
+				<!-- /Page Content -->
+				
+            </div>
+			<!-- /Page Wrapper -->
+			{% endblock body %}

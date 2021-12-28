@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Sun Oct 03 2021 12:49:21 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/forms.py
+* accounts/templates/includes/employee/employee_update.html
+* db.sqlite3
+* hr/templates/includes/asset_update.html
+* hr/views.py
+
+
+Created files:
+* .autogit/logs/log-3-9-2021-12-19-10.txt
+
+
+Deleted files:
+
+
+Renamed files:

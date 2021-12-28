@@ -1,0 +1,26 @@
+-------------------- Auto-Git Log --------------------
+		Mon Aug 23 2021 19:53:35 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/admin.py
+* accounts/forms.py
+* accounts/models.py
+* employee/views.py
+* hr/templates/hr/training.html
+* hr/urls.py
+* hr/views.py
+* settings/admin.py
+* templates/base.html
+
+
+Created files:
+* accounts/migrations/0006_rename_coust_usertraining_cost.py
+* media/attachements_img/439-4397303_programmers-png-transparent-png.png
+* media/attachements_img/images_09MSY4G.jpg
+
+
+Deleted files:
+
+
+Renamed files:

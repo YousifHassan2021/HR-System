@@ -1,0 +1,24 @@
+-------------------- Auto-Git Log --------------------
+		Mon Sep 13 2021 20:42:07 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/forms.py
+* accounts/models.py
+* hr/views.py
+* missed.md
+* templates/404.html
+* templates/500.html
+* templates/base.html
+
+
+Created files:
+* .autogit/logs/log-13-8-2021-20-11-56.txt
+* media/attachements_files/27-275977_coding-icon-hd-png-download.png
+* media/attachements_img/58bab048c5e7001256cd9d85f9d6044c.png
+
+
+Deleted files:
+
+
+Renamed files:

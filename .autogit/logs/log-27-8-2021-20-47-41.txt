@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Mon Sep 27 2021 20:47:41 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* hr/templates/hr/holidays.html
+* hr/views.py
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

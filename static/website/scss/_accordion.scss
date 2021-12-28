@@ -1,0 +1,123 @@
+/* 17. accordion */
+.accordion-button.collapsed.acc-btn {
+	border: 0;
+	margin-bottom: 10px;
+	background: $white;
+	color: $heding;
+	font-size: 18px;
+    padding: 25px 35px;
+	transition: .3s;
+	white-space: normal;
+	word-wrap: normal;
+	@media #{$sm} {
+		padding: 25px 30px;
+		font-size: 16px;
+	}
+	@media #{$xs} {
+		padding: 25px 30px;
+		font-size: 16px;
+		text-align: left;
+	}
+}
+
+.accordion-button:focus {
+	z-index: 3;
+    border-color: none;
+	outline: 0;
+	box-shadow: none
+}
+
+.accordion-button:not(.collapsed) {
+	color: $heding;
+	background-color: $white;
+}
+.accordion-button {
+	font-size: 18px;
+	color: $black-sotf1;
+	background-color: $white;
+    border: none;
+	padding: 25px 35px;
+	@media #{$xs} {
+		padding: 20px 10px;
+	}
+}
+
+.accordion-body {
+	background: $white;
+	margin-bottom: 10px;
+	outline: 0;
+	padding: 0 110px 30px 35px;
+	font-size: 16px;
+	color: $body-text-color;
+	@media #{$xs} {
+		padding: 0 20px 20px 20px;
+	}
+}
+.accordion-button.acc-btn {
+	padding-bottom: 13px;
+	@media #{$xs} {
+		text-align: left;
+		font-size: 16px;
+	}
+}
+
+.accordion-button.acc-btn.collapsed::after {
+	position: absolute;
+	content: "\f067";
+	font-family: "Font Awesome 5 Pro";
+	right: 35px;
+	font-size: 13px;
+	color: $theme-color5;
+	line-height: 1.5;
+	font-weight: 400;
+	@media #{$sm} {
+		right: 20px;
+	}
+	@media #{$xs} {
+		right: 0;
+	}
+}
+.accordion-button::after {
+	flex-shrink: 0;
+	width: 1.25rem;
+	height: 1.25rem;
+	margin-left: auto;
+    content: "\f068";
+    font-family: "Font Awesome 5 Pro";
+	transition: transform .2s ease-in-out;
+	background-image: inherit;
+}
+
+.accordion-button:not(.collapsed)::after {
+	background-image: inherit;
+    content: "\f068";
+    font-family: "Font Awesome 5 Pro";
+    right: 35px;
+	font-size: 13px;
+	color: $theme-color5;
+	line-height: 1.5;
+	font-weight: 400;
+}
+
+.accordion-collapse {
+	border: none;
+}
+
+// home page-04
+.question-wrapper-h4 {
+	& .accordion-button {
+		&::after {
+			color: $theme-color4;
+		}
+		&.acc-btn {
+			&.collapsed{
+				&::after{
+					color: $theme-color4;
+				}
+			}
+		}
+	}
+	& .accordion-item {
+		box-shadow: 0px 10px 60px 0px rgba(225, 225, 225, 0.4);
+	}
+}

@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Mon Jul 26 2021 21:35:13 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* accounts/models.py
+* managers/models.py
+* settings/models.py
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

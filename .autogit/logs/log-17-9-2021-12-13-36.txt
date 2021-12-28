@@ -1,0 +1,23 @@
+-------------------- Auto-Git Log --------------------
+		Sun Oct 17 2021 12:13:36 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* db.sqlite3
+* settings/forms.py
+* settings/models.py
+* website/templates/website/new_company.html
+* website/views.py
+
+
+Created files:
+* .autogit/logs/log-17-9-2021-11-43-26.txt
+* settings/migrations/0005_auto_20211017_0954.py
+* settings/migrations/0006_alter_company_website_url.py
+* settings/migrations/0007_alter_company_city.py
+
+
+Deleted files:
+
+
+Renamed files:

@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Sat Sep 11 2021 19:52:32 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* templates/base.html
+* templates/employee_base.html
+* templates/manager_base.html
+
+
+Created files:
+* menu.md
+
+
+Deleted files:
+
+
+Renamed files:

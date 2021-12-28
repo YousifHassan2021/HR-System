@@ -1,0 +1,76 @@
+
+{% extends 'base.html' %}
+{% load i18n %}
+{% block body %}	
+			<!-- Page Wrapper -->
+            <div class="page-wrapper">
+			
+				<!-- Page Content -->
+                <div class="content container-fluid">
+				
+					<!-- Page Header -->
+					<div class="page-header">
+						<div class="row align-items-center">
+							<div class="col">
+								<h3 class="page-title">{% trans 'Loan' %}</h3>
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item"><a href="">{% trans 'Dashboard' %}</a></li>
+									<li class="breadcrumb-item active">{% trans 'Loan' %}</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- /Page Header -->
+					
+					<div class="row">
+						<div class="col-md-12">
+							<div class="table-responsive">
+								<table class="table table-striped custom-table mb-0 datatable">
+									<thead>
+										<tr>
+											<th style="width: 30px;">#</th>
+											<th>{% trans 'Loan Type' %}</th>
+											<th>{% trans 'Amount' %}</th>
+											<th>{% trans 'Duration Start' %}</th>
+											<th>{% trans 'Duration Start' %} </th>
+											<th>{% trans 'Monthly Detect' %} </th>
+											<th>{% trans 'Status' %} </th>
+										</tr>
+									</thead>
+									<tbody>
+										
+										{% for course in my_training %}
+											<tr>
+												<td>{{forloop.counter}}</td>
+												<td>{{course}}</td>
+												<td>
+													<h2 class="table-avatar">
+														<a href="profile.html" class="avatar"><img alt="" src="{{course.trainer.user_profile.image.url}}"></a>
+														<a href="profile.html">{{course.trainer.username}}</a>
+													</h2>
+												</td>
+												<td>{{course.start_date|date:"d M Y"}} - {{course.end_date|date:"d M Y"}}</td>
+												<td>{{course.notes}}</td>
+												<td>${{course.cost}}</td>
+												<td>
+													{% if course.status == "ACTIVE" %}
+														<i class="fa fa-dot-circle-o text-success"></i> Active
+													{% else %}
+														<i class="fa fa-dot-circle-o text-danger"></i> Inactive
+													{% endif %}
+													
+												</td>
+											</tr>
+										{% endfor %}
+											
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+                </div>
+				<!-- /Page Content -->
+
+            </div>
+			<!-- /Page Wrapper -->
+			{% endblock body %}

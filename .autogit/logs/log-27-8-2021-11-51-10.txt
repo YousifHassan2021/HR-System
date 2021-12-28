@@ -1,0 +1,26 @@
+-------------------- Auto-Git Log --------------------
+		Mon Sep 27 2021 11:51:10 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* db.sqlite3
+* hr/static/hr/handel_jobs_ajax.js
+* hr/templates/hr/jobs.html
+* hr/templates/includes/departments_list.html
+* hr/templates/includes/jobs_list.html
+* hr/templates/includes/jobs_update.html
+* hr/urls.py
+* hr/views.py
+* missed.md
+* static/css/style.css
+
+
+Created files:
+* hr/templates/includes/job_create.html
+* hr/templates/includes/job_delete.html
+
+
+Deleted files:
+
+
+Renamed files:

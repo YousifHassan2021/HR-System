@@ -1,0 +1,27 @@
+-------------------- Auto-Git Log --------------------
+		Wed Sep 08 2021 19:40:42 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* employee/views.py
+* managers/models.py
+* managers/urls.py
+* managers/views.py
+* missed.md
+
+
+Created files:
+* accounts/migrations/0014_alter_userovertime_options.py
+* managers/migrations/0002_project_manager.py
+* managers/templates/managers/dashboard.html
+* managers/templates/managers/employee-detail.html
+* managers/templates/managers/employees.html
+* managers/templates/managers/project-view.html
+* managers/templates/managers/projects.html
+* templates/manager_base.html
+
+
+Deleted files:
+
+
+Renamed files:

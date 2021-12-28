@@ -1,0 +1,22 @@
+-------------------- Auto-Git Log --------------------
+		Sat Oct 02 2021 19:39:21 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* db.sqlite3
+* static/website/css/main.css
+* website/models.py
+* website/templates/website/home.html
+* website/templates/website_base.html
+* website/views.py
+
+
+Created files:
+* website/migrations/0003_homebanner_button_link.py
+* website/migrations/0004_auto_20211002_1727.py
+
+
+Deleted files:
+
+
+Renamed files:

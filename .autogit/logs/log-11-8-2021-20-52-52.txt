@@ -1,0 +1,28 @@
+-------------------- Auto-Git Log --------------------
+		Sat Sep 11 2021 20:52:52 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* employee/views.py
+* hr/admin.py
+* hr/models.py
+* hr/urls.py
+* hr/views.py
+* managers/views.py
+* missed.md
+* project/settings.py
+* templates/manager_base.html
+
+
+Created files:
+* .autogit/logs/log-11-8-2021-20-22-42.txt
+* hr/migrations/0001_initial.py
+* hr/migrations/0002_alter_announcement_created_at.py
+* hr/templates/hr/activities.html
+* utils/announcement_context.py
+
+
+Deleted files:
+
+
+Renamed files:

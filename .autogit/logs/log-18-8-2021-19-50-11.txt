@@ -1,0 +1,29 @@
+-------------------- Auto-Git Log --------------------
+		Sat Sep 18 2021 19:50:11 GMT+0200 (Eastern European Standard Time)
+------------------------------------------------------
+
+Modified files:
+* settings.md
+* settings/views.py
+
+
+Created files:
+* .autogit/logs/log-18-8-2021-19-20-0.txt
+* "settings/templates/settings/asset_condition copy 11.html"
+* "settings/templates/settings/asset_condition copy 12.html"
+* "settings/templates/settings/asset_condition copy.html"
+* settings/templates/settings/asset_status.html.html
+* settings/templates/settings/attendance_types.html.html
+* settings/templates/settings/bank_names.html
+* settings/templates/settings/branch.html
+* settings/templates/settings/city.html
+* settings/templates/settings/discount_types.html.html
+* settings/templates/settings/employee_status.html.html
+* settings/templates/settings/insurance_class.html
+* settings/templates/settings/insurance_company.html
+
+
+Deleted files:
+
+
+Renamed files:
